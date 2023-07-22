@@ -1,14 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 
 public class Load_level : MonoBehaviour
 {
     public int level;
+    public TextMeshProUGUI text;
 
-    void loadLevel()
+    private void Start()
     {
-        SceneManager.LoadScene(level.ToString());
+        text.text = level.ToString();
+    }
+
+    public void loadLevel()
+    {
+        SceneManager.LoadScene("level " + level.ToString());
     }
 }
