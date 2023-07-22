@@ -473,7 +473,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8518353828037204246, guid: 564d5fa765ac3764fa91d633d848ad2d, type: 3}
       propertyPath: level
-      value: Nil
+      value: MainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 8518353828037204246, guid: 564d5fa765ac3764fa91d633d848ad2d, type: 3}
       propertyPath: message
