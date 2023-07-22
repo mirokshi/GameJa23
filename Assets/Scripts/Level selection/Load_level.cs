@@ -8,10 +8,11 @@ public class Load_level : MonoBehaviour
 {
     public int level;
     public TextMeshProUGUI text;
+    public string message;
 
     private void Start()
     {
-        text.text = level.ToString();
+        text.text = message.ToString();
     }
 
     public void loadLevel()
