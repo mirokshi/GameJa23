@@ -49,7 +49,7 @@ public class InventoryUI : MonoBehaviour
         {
             MakeNewEntry(inventory.GetSlot(i));
         }
-        MoneyText.text = _inventory.Money + "€";
+        MoneyText.text = _inventory.Weight + "KG";
     }
 
     private void MakeNewEntry(InventorySlot slot)

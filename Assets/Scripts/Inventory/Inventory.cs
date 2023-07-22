@@ -87,7 +87,8 @@ public class Inventory : ScriptableObject
 
     public bool CanBuy(ItemObject item)
     {
-        return Money >= item.Price && (item.Type == InventoryType || InventoryType == ItemType.All);
+        //return Money >= item.Price && (item.Type == InventoryType || InventoryType == ItemType.All);
+        return true;
     }
 
     public void SetCanDrag(bool bol)

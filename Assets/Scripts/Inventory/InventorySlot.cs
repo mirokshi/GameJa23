@@ -38,6 +38,7 @@ public class InventorySlot
 
     public bool CanHold(ItemObject item)
     {
-        return item == _itemObject && Amount < item.StackAmount;
+        //return item == _itemObject && Amount < item.StackAmount;
+        return true;
     }
 }
