@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Load_level : MonoBehaviour
 {
-    public int level;
+    public string level;
     public TextMeshProUGUI text;
     public string message;
 
@@ -17,6 +17,12 @@ public class Load_level : MonoBehaviour
 
     public void loadLevel()
     {
-        SceneManager.LoadScene("level " + level.ToString());
+        SceneManager.LoadScene(level);
+    }
+
+    public void exit()
+    {
+        Debug.Log("Exit");
+        Application.Quit();
     }
 }
