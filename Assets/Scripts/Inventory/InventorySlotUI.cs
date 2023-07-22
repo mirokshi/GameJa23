@@ -24,7 +24,7 @@ public class InventorySlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         _slot = slot;
         _image.sprite = slot.ItemObject.ImageUI;
         _amount.text = slot.Amount.ToString();
-        _priceText.text = slot.ItemObject.Price + "€";
+        _priceText.text = slot.ItemObject.Value + "€";
         _itemObject = slot.ItemObject;
         _inventory = inventory;
     }

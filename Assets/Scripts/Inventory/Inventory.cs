@@ -10,8 +10,7 @@ public class Inventory : ScriptableObject
     [SerializeField] private List<InventorySlot> Slots;
     [SerializeField] private int MaxSize = 100;
 
-    public ItemType InventoryType;
-    public int Money;
+    public int Weight;
     public int Size => Slots.Count;
     public bool CanDrag { get; private set; }
 
@@ -43,7 +42,7 @@ public class Inventory : ScriptableObject
             }
         }
 
-        Money -= item.Price;
+        Weight += item.Weight;
         OnInventoryChanged?.Invoke();
     }
 
@@ -60,7 +59,7 @@ public class Inventory : ScriptableObject
             Slots.Remove(slot);
         }
         
-        Money += slot.ItemObject.Price;
+        Weight += slot.ItemObject.Weight;
         OnInventoryChanged?.Invoke();
     }
 
