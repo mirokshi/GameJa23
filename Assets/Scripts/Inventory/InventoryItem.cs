@@ -64,4 +64,12 @@ public class InventoryItem : MonoBehaviour
         Debug.Log("GameObject " + _itemData.name + " is being destroyed!"); // DELETE LATER
         Destroy(gameObject);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
+    }
 }
