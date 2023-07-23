@@ -411,7 +411,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 6
+  m_Constraints: 4
 --- !u!212 &1123629384
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -491,6 +491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe7ce19d08c20eb4ca6d4299fcb675f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isDead: 0
 --- !u!114 &1123629387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -561,7 +562,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 2
+  m_Constraints: 0
 --- !u!212 &1690541925
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -641,7 +642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdb1cce6d02ba7742b2d57ae09390f43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 4
+  velocity: 4.5
 --- !u!114 &1690541928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -654,6 +655,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3c24db4ea0924eadf6758578657c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerDetector: {fileID: 0}
+  radius: 10
 --- !u!1 &1958520133
 GameObject:
   m_ObjectHideFlags: 0
