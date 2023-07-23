@@ -8,6 +8,8 @@ public class InventoryController : MonoBehaviour
 {
     [HideInInspector]
     private ItemGrid selectedItemGrid;
+
+    [SerializeField] private ItemGrid handInventory;
     
     public ItemGrid SelectedItemGrid
     {
@@ -143,6 +145,21 @@ public class InventoryController : MonoBehaviour
         inventoryItem.Set(items[selectedItemID]);
     }
 
+    private void GetItem(InventoryItem item)
+    {
+        selectedItemGrid = handInventory;
+        // Si mano esta vacia
+        if (!handInventory.isItemInInventory())
+        {
+            InventoryItem inventoryItem = Instantiate(itemPrefab).GetComponent<InventoryItem>();
+            selectedItem = inventoryItem;
+            _rectTransform = inventoryItem.GetComponent<RectTransform>();
+            _rectTransform.SetParent(canvasTransform);
+            _rectTransform.SetAsLastSibling();
+            inventoryItem.Set(item._itemData);
+        }
+    }
+
     private void LeftMouseButtonPress()
     {
         var tileGridPosition = GetTileGridPosition();
@@ -202,5 +219,15 @@ public class InventoryController : MonoBehaviour
         {
             _rectTransform.position = Input.mousePosition;
         }
+    }
+
+    private void OnEnable()
+    {
+        ItemController.OnPickUpItem += GetItem;
+    }
+
+    private void OnDisable()
+    {
+        ItemController.OnPickUpItem -= GetItem;
     }
 }
