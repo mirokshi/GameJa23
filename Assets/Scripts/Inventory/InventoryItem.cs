@@ -8,9 +8,7 @@ using UnityEngine.UI;
 public class InventoryItem : MonoBehaviour
 {
     public ItemData _itemData;
-
-    public string id;
-
+    
     public int HEIGHT
     {
         get
@@ -39,7 +37,6 @@ public class InventoryItem : MonoBehaviour
     
     public int onGridPositionX;
     public int onGridPositionY;
-
     public bool rotated = false;
     
     
@@ -68,13 +65,5 @@ public class InventoryItem : MonoBehaviour
     {
         Debug.Log("GameObject " + _itemData.name + " is being destroyed!"); // DELETE LATER
         Destroy(gameObject);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            Destroy(gameObject);
-        }
     }
 }

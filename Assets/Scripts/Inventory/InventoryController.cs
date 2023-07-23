@@ -95,11 +95,12 @@ public class InventoryController : MonoBehaviour
 
     private void InsertItem(InventoryItem itemToInsert)
     {
+        Debug.Log("Ha entrado a InsertItem");
         //Inserta objects al inventario
-        
         Vector2Int? posOnGrid = selectedItemGrid.FindSpaceForObject(itemToInsert);
+        
         if (posOnGrid ==  null) {return;}
-
+        
         selectedItemGrid.PlaceItem(itemToInsert, posOnGrid.Value.x, posOnGrid.Value.y);
     }
 
@@ -145,19 +146,23 @@ public class InventoryController : MonoBehaviour
         inventoryItem.Set(items[selectedItemID]);
     }
 
-    private void GetItem(InventoryItem item)
+    private void PickUpItem(InventoryItem item)
     {
         selectedItemGrid = handInventory;
-        // Si mano esta vacia
-        if (!handInventory.isItemInInventory())
-        {
-            InventoryItem inventoryItem = Instantiate(itemPrefab).GetComponent<InventoryItem>();
-            selectedItem = inventoryItem;
-            _rectTransform = inventoryItem.GetComponent<RectTransform>();
-            _rectTransform.SetParent(canvasTransform);
-            _rectTransform.SetAsLastSibling();
-            inventoryItem.Set(item._itemData);
-        }
+        
+        Debug.Log("Ha entrado al HandInventory");
+        InventoryItem inventoryItem = Instantiate(itemPrefab).GetComponent<InventoryItem>();
+        selectedItem = inventoryItem;
+        _rectTransform = inventoryItem.GetComponent<RectTransform>();
+        _rectTransform.SetParent(canvasTransform);
+        _rectTransform.SetAsLastSibling(); 
+        inventoryItem.Set(item._itemData);
+        
+        Debug.Log("Ha creado el item");
+        InventoryItem itemToInsert = selectedItem;
+        selectedItem = null;
+        InsertItem(itemToInsert);
+        selectedItemGrid = null;
     }
 
     private void LeftMouseButtonPress()
@@ -223,11 +228,11 @@ public class InventoryController : MonoBehaviour
 
     private void OnEnable()
     {
-        ItemController.OnPickUpItem += GetItem;
+        global::PickUpItem.OnPickUpItem += PickUpItem;
     }
 
     private void OnDisable()
     {
-        ItemController.OnPickUpItem -= GetItem;
+        global::PickUpItem.OnPickUpItem -= PickUpItem;
     }
 }
