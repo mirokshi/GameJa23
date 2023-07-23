@@ -149,7 +149,7 @@ public class InventoryController : MonoBehaviour
     private void PickUpItem(InventoryItem item)
     {
         selectedItemGrid = handInventory;
-        if (!selectedItemGrid.isItemInInventory())
+        if (!selectedItemGrid.IsItemInInventory())
         {
             CreateItem(item);
             
