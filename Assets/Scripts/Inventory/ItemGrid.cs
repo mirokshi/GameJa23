@@ -4,21 +4,29 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
+using UnityEngine.Serialization;
 
 public class ItemGrid : MonoBehaviour
 {
-    public const float tileSizeWidth = 32;
-    public const float tileSizeHeight = 32;
+    public const float TileSizeWidth = 32;
+    public const float TileSizeHeight = 32;
+    
+    public static Action<InventoryItem> OnThrowItem;
+    public static Action OnOnlyOneItem;
 
     private RectTransform _rectTransform;
     
-    private Vector2 positionOnTheGrid = new Vector2();
-    private Vector2Int tileGridPosition = new Vector2Int();
+    private Vector2 _positionOnTheGrid = new Vector2();
+    private Vector2Int _tileGridPosition = new Vector2Int();
 
-    private InventoryItem[,] _inventoryItemSlot;
+    private InventoryItem[,] InventoryItemSlot;
+
+    private bool _isItemInInventory;
     
     [SerializeField] private int gridSizeWidth=7;
     [SerializeField] private int gridSizeHeight=4;
+    [SerializeField] private ItemGridType itemGridType;
+    
 
     private void Start()
     {
@@ -28,32 +36,37 @@ public class ItemGrid : MonoBehaviour
 
     private void Init(int width, int height)
     {
-        _inventoryItemSlot = new InventoryItem[width, height];
-        Vector2 size = new Vector2(width * tileSizeWidth, height * tileSizeHeight);
+        InventoryItemSlot = new InventoryItem[width, height];
+        Vector2 size = new Vector2(width * TileSizeWidth, height * TileSizeHeight);
         _rectTransform.sizeDelta = size;
     }
 
     public Vector2Int GetTileGridPosition(Vector2 mousePosition)
     {
         var position = _rectTransform.position;
-        positionOnTheGrid.x = mousePosition.x - position.x;
-        positionOnTheGrid.y = position.y - mousePosition.y;
-        tileGridPosition.x = (int)(positionOnTheGrid.x / tileSizeWidth);
-        tileGridPosition.y = (int)(positionOnTheGrid.y / tileSizeHeight);
+        _positionOnTheGrid.x = mousePosition.x - position.x;
+        _positionOnTheGrid.y = position.y - mousePosition.y;
+        _tileGridPosition.x = (int)(_positionOnTheGrid.x / TileSizeWidth);
+        _tileGridPosition.y = (int)(_positionOnTheGrid.y / TileSizeHeight);
 
-        return tileGridPosition;
+        return _tileGridPosition;
     }
 
-    public bool PlaceItem(InventoryItem inventoryItem,int posX,int posY,ref InventoryItem overlapITem)
+    public bool PlaceItem(InventoryItem inventoryItem, int posX, int posY, ref InventoryItem overlapITem)
     {
         if (BoundryCheck(posX,posY,inventoryItem.WIDTH,inventoryItem.HEIGHT)==false)
         {
             return false;
         }
 
-        if (OverlapCheck(posX,posY,inventoryItem.WIDTH,inventoryItem.HEIGHT,ref overlapITem)== false)
+        if (OverlapCheck(posX,posY,inventoryItem.WIDTH,inventoryItem.HEIGHT,ref overlapITem) == false)
         {
             overlapITem = null;
+            return false;
+        }
+        
+        if (itemGridType == ItemGridType.Hand && _isItemInInventory && overlapITem == null)
+        {
             return false;
         }
 
@@ -61,8 +74,19 @@ public class ItemGrid : MonoBehaviour
         {
             ClearGridReference(overlapITem);
         }
-        
+
         PlaceItem(inventoryItem, posX, posY);
+        
+        if (itemGridType == ItemGridType.Throw)
+        {
+            OnThrowItem?.Invoke(inventoryItem);
+        }
+
+        if (itemGridType == ItemGridType.Hand)
+        {
+            _isItemInInventory = true;
+            Debug.Log("Items place: " + _isItemInInventory);
+        }
 
         return true;
     }
@@ -76,7 +100,7 @@ public class ItemGrid : MonoBehaviour
         {
             for (int y = 0; y < inventoryItem.HEIGHT; y++)
             {
-                _inventoryItemSlot[posX + x, posY + y] = inventoryItem;
+                InventoryItemSlot[posX + x, posY + y] = inventoryItem;
             }
         }
 
@@ -91,8 +115,8 @@ public class ItemGrid : MonoBehaviour
     public Vector2 CalculatePositionGrid(InventoryItem inventoryItem, int posX, int posY)
     {
         Vector2 position = new Vector2();
-        position.x = posX * tileSizeWidth + tileSizeWidth * inventoryItem.WIDTH / 2;
-        position.y = -(posY * tileSizeHeight + tileSizeHeight * inventoryItem.HEIGHT / 2);
+        position.x = posX * TileSizeWidth + TileSizeWidth * inventoryItem.WIDTH / 2;
+        position.y = -(posY * TileSizeHeight + TileSizeHeight * inventoryItem.HEIGHT / 2);
 
         return position;
     }
@@ -100,10 +124,16 @@ public class ItemGrid : MonoBehaviour
 
     public InventoryItem PickUpItem(int x,int y)
     {
-        InventoryItem toReturn = _inventoryItemSlot[x, y];
+        InventoryItem toReturn = InventoryItemSlot[x, y];
         
         if (toReturn == null) { return null; }
-        
+
+        if (itemGridType == ItemGridType.Hand)
+        {
+            _isItemInInventory = false;
+            Debug.Log("Items: " + _isItemInInventory);
+        }
+
         ClearGridReference(toReturn);
 
         return toReturn;
@@ -115,7 +145,7 @@ public class ItemGrid : MonoBehaviour
         {
             for (int yi = 0; yi < item.HEIGHT; yi++)
             {
-                _inventoryItemSlot[item.onGridPositionX + xi, item.onGridPositionY + yi] = null;
+                InventoryItemSlot[item.onGridPositionX + xi, item.onGridPositionY + yi] = null;
             }
         }
     }
@@ -158,13 +188,13 @@ public class ItemGrid : MonoBehaviour
         {
             for (int y = 0; y < height; y++)
             {
-                if (_inventoryItemSlot[posX+x,posY+y] != null)
+                if (InventoryItemSlot[posX+x,posY+y] != null)
                 {
-                    overlapItem = _inventoryItemSlot[posX + x, posY + y];
+                    overlapItem = InventoryItemSlot[posX + x, posY + y];
                 }
                 else
                 {
-                    if (overlapItem != _inventoryItemSlot[posX + x, posY + y])
+                    if (overlapItem != InventoryItemSlot[posX + x, posY + y])
                     {
                         return false;   
                     }
@@ -176,7 +206,7 @@ public class ItemGrid : MonoBehaviour
 
     internal InventoryItem GetItem(int x, int y)
     {
-        return _inventoryItemSlot[x, y];
+        return InventoryItemSlot[x, y];
     }
 
     public Vector2Int? FindSpaceForObject(InventoryItem itemToInsert)
@@ -203,7 +233,7 @@ public class ItemGrid : MonoBehaviour
         {
             for (int y = 0; y < height; y++)
             {
-                if (_inventoryItemSlot[posX+x,posY+y] != null)
+                if (InventoryItemSlot[posX+x,posY+y] != null)
                 {
                     return false;
                 }
