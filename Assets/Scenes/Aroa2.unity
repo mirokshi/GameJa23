@@ -234,10 +234,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4a546af63303c346b74a8117436fefa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  handInventory: {fileID: 0}
   items:
-  - {fileID: 11400000, guid: 41d4232838dab1947b3b7fc1a3a1dc59, type: 2}
-  - {fileID: 11400000, guid: aa2e8070b6aff35419d5bf0b2fd7a83b, type: 2}
-  - {fileID: 11400000, guid: 6345105c33a18944db5ded6de52ee20d, type: 2}
+  - {fileID: 11400000, guid: a8f5b5dfe3dda474fb9a82532ae7e282, type: 2}
+  - {fileID: 11400000, guid: 029b04438e9d471449ff8d26d803d7ec, type: 2}
+  - {fileID: 11400000, guid: 4faf67aaaa4470d4e97d451704ac9e95, type: 2}
+  - {fileID: 11400000, guid: 2a7c7134193339a44aaee4e824d11991, type: 2}
+  - {fileID: 11400000, guid: c7cf69efde7a17b45b0efe4cf7471db1, type: 2}
+  - {fileID: 11400000, guid: 9bea542e23578164993739d895c10499, type: 2}
+  - {fileID: 11400000, guid: 6cd47813a4fc0a5438ba82186d864e61, type: 2}
+  - {fileID: 11400000, guid: a2c8718d9f8d23942a375d9933bb72b5, type: 2}
+  - {fileID: 11400000, guid: 75efb0e6c2cd8d44bb2cf9e958d0bcdb, type: 2}
+  - {fileID: 11400000, guid: dc03623ea9d54c749a54e249712c2b5c, type: 2}
+  - {fileID: 11400000, guid: 180d3f1f49b509d4e9a2f65a692bd9b7, type: 2}
+  - {fileID: 11400000, guid: e1e89d96a8d69f849bb549ec911dea2d, type: 2}
+  - {fileID: 11400000, guid: b5f3138335bbab242b539414b1dd777e, type: 2}
+  - {fileID: 11400000, guid: bf677b63e54d4a64e8ce7161449ac56f, type: 2}
+  - {fileID: 11400000, guid: f62722666ed541447a280cb38c2c1171, type: 2}
+  - {fileID: 11400000, guid: b01ad530a1ecf2941bed15da76380046, type: 2}
   itemPrefab: {fileID: 8128289522782051307, guid: 7f79f713025025144b4158a927960364, type: 3}
   canvasTransform: {fileID: 2031078356}
 --- !u!1 &979060302

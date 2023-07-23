@@ -16,4 +16,4 @@ MonoBehaviour:
   height: 1
   peso: 1
   valor: 13
-  itemIcon: {fileID: 21300000, guid: ff00345da0563d641903c5bd5bb748a4, type: 3}
+  itemIcon: {fileID: 21300000, guid: f120fec0c97a35643bc448bd74f9643e, type: 3}

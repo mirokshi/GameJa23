@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b23f6c37cdebb8b4a956dfbe7c83750a, type: 3}
   m_Name: Cofre
   m_EditorClassIdentifier: 
-  width: 4
-  height: 4
+  width: 3
+  height: 3
   peso: 30
   valor: 27
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: f53a7575d52a55d49abab4065d8c4b55, type: 3}
