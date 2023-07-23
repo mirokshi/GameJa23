@@ -73,7 +73,6 @@ public class InventoryController : MonoBehaviour
         {
             LeftMouseButtonPress();
         }
-
     }
 
     private void RotateItem()
@@ -95,8 +94,6 @@ public class InventoryController : MonoBehaviour
 
     private void InsertItem(InventoryItem itemToInsert)
     {
-        Debug.Log("Ha entrado a InsertItem");
-        //Inserta objects al inventario
         Vector2Int? posOnGrid = selectedItemGrid.FindSpaceForObject(itemToInsert);
         
         if (posOnGrid ==  null) {return;}
@@ -148,29 +145,27 @@ public class InventoryController : MonoBehaviour
 
     private void PickUpItem(InventoryItem item)
     {
-        selectedItemGrid = handInventory;
-        if (!selectedItemGrid.IsItemInInventory())
+        if (!handInventory.IsItemInInventory())
         {
-            CreateItem(item);
-            
-            var itemToInsert = selectedItem;
-            selectedItem = null;
-            
-            InsertItem(itemToInsert);
+            var itemToInsert = CreateItem(item);
+            InsertItemHand(itemToInsert);
         }
-        selectedItemGrid = null;
     }
 
-    private void CreateItem(InventoryItem item)
+    private InventoryItem CreateItem(InventoryItem item)
     {
         InventoryItem inventoryItem = Instantiate(itemPrefab).GetComponent<InventoryItem>();
-        selectedItem = inventoryItem;
-        _rectTransform = inventoryItem.GetComponent<RectTransform>();
-        _rectTransform.SetParent(canvasTransform);
-        _rectTransform.SetAsLastSibling();
         inventoryItem.Set(item._itemData);
+        return inventoryItem;
+    }
+    
+    private void InsertItemHand(InventoryItem itemToInsert)
+    {
+        Vector2Int? posOnGrid = handInventory.FindSpaceForObject(itemToInsert);
         
-        Debug.Log("Ha creado el item");
+        if (posOnGrid ==  null) {return;}
+        
+        handInventory.PlaceItem(itemToInsert, posOnGrid.Value.x, posOnGrid.Value.y);
     }
 
     private void LeftMouseButtonPress()

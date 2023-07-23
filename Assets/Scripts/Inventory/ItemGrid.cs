@@ -24,7 +24,7 @@ public class ItemGrid : MonoBehaviour
     [SerializeField] private int gridSizeWidth=7;
     [SerializeField] private int gridSizeHeight=4;
     [SerializeField] private ItemGridType itemGridType;
-
+    
     private void Start()
     {
         _rectTransform = GetComponent<RectTransform>();
@@ -87,7 +87,6 @@ public class ItemGrid : MonoBehaviour
         if (itemGridType == ItemGridType.Hand)
         {
             _isItemInInventory = true;
-            Debug.Log("Items place: " + _isItemInInventory);
         }
         
         RectTransform rectTransform = inventoryItem.GetComponent<RectTransform>();
@@ -128,7 +127,6 @@ public class ItemGrid : MonoBehaviour
         if (itemGridType == ItemGridType.Hand)
         {
             _isItemInInventory = false;
-            Debug.Log("Items: " + _isItemInInventory);
         }
 
         ClearGridReference(toReturn);
@@ -248,6 +246,22 @@ public class ItemGrid : MonoBehaviour
             return _isItemInInventory;
         
         return false;
+    }
+
+    public ItemData GetItemHand()
+    {
+        for (int x = 0; x < gridSizeWidth; x++)
+        {
+            for (int y = 0; y < gridSizeHeight; y++)
+            {
+                if (InventoryItemSlot[x,y] != null)
+                {
+                    return  InventoryItemSlot[x,y]._itemData;
+                }
+            }
+        }
+
+        return null;
     }
     
 }

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b23f6c37cdebb8b4a956dfbe7c83750a, type: 3}
   m_Name: Linterna
   m_EditorClassIdentifier: 
+  itemType: 2
   width: 1
   height: 2
   peso: 7
