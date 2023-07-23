@@ -73,7 +73,6 @@ public class InventoryController : MonoBehaviour
         {
             LeftMouseButtonPress();
         }
-
     }
 
     private void RotateItem()
@@ -95,8 +94,6 @@ public class InventoryController : MonoBehaviour
 
     private void InsertItem(InventoryItem itemToInsert)
     {
-        Debug.Log("Ha entrado a InsertItem");
-        //Inserta objects al inventario
         Vector2Int? posOnGrid = selectedItemGrid.FindSpaceForObject(itemToInsert);
         
         if (posOnGrid ==  null) {return;}
@@ -148,13 +145,11 @@ public class InventoryController : MonoBehaviour
 
     private void PickUpItem(InventoryItem item)
     {
-        selectedItemGrid = handInventory;
-        if (!selectedItemGrid.IsItemInInventory())
+        if (!handInventory.IsItemInInventory())
         {
             var itemToInsert = CreateItem(item);
-            InsertItem(itemToInsert);
+            InsertItemHand(itemToInsert);
         }
-        selectedItemGrid = null;
     }
 
     private InventoryItem CreateItem(InventoryItem item)
@@ -162,6 +157,16 @@ public class InventoryController : MonoBehaviour
         InventoryItem inventoryItem = Instantiate(itemPrefab).GetComponent<InventoryItem>();
         inventoryItem.Set(item._itemData);
         return inventoryItem;
+    }
+    
+    private void InsertItemHand(InventoryItem itemToInsert)
+    {
+        Debug.Log("Ha cogido item a Hand");
+        Vector2Int? posOnGrid = handInventory.FindSpaceForObject(itemToInsert);
+        
+        if (posOnGrid ==  null) {return;}
+        
+        handInventory.PlaceItem(itemToInsert, posOnGrid.Value.x, posOnGrid.Value.y);
     }
 
     private void LeftMouseButtonPress()
