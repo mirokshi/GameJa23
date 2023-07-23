@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     {
         _capsuleCollider = GetComponent<CapsuleCollider2D>();
     }
+    
+    
 
 
 }

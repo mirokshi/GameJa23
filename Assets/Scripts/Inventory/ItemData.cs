@@ -14,4 +14,5 @@ public class ItemData : ScriptableObject
     public int valor = 1;
     
     public Sprite itemIcon;
+    
 }
