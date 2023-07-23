@@ -37,4 +37,9 @@ public class Fall : MonoBehaviour, IObstacle
             }
         }
     }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        throw new NotImplementedException();
+    }
 }

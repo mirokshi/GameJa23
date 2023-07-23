@@ -151,26 +151,17 @@ public class InventoryController : MonoBehaviour
         selectedItemGrid = handInventory;
         if (!selectedItemGrid.IsItemInInventory())
         {
-            CreateItem(item);
-            
-            var itemToInsert = selectedItem;
-            selectedItem = null;
-            
+            var itemToInsert = CreateItem(item);
             InsertItem(itemToInsert);
         }
         selectedItemGrid = null;
     }
 
-    private void CreateItem(InventoryItem item)
+    private InventoryItem CreateItem(InventoryItem item)
     {
         InventoryItem inventoryItem = Instantiate(itemPrefab).GetComponent<InventoryItem>();
-        selectedItem = inventoryItem;
-        _rectTransform = inventoryItem.GetComponent<RectTransform>();
-        _rectTransform.SetParent(canvasTransform);
-        _rectTransform.SetAsLastSibling();
         inventoryItem.Set(item._itemData);
-        
-        Debug.Log("Ha creado el item");
+        return inventoryItem;
     }
 
     private void LeftMouseButtonPress()
