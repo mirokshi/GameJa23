@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 using UnityEngine.Serialization;
@@ -241,6 +240,14 @@ public class ItemGrid : MonoBehaviour
             }
         }
         return true;
+    }
+
+    public bool isItemInInventory()
+    {
+        if (itemGridType == ItemGridType.Hand)
+            return _isItemInInventory;
+        
+        return false;
     }
     
 }
