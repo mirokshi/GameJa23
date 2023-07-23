@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class UseItem : MonoBehaviour
 {
-   [SerializeField] private static ItemGrid _hand;
+   [SerializeField] private ItemGrid _hand;
 
    public static Action OnDeath;
 
@@ -33,7 +33,7 @@ public class UseItem : MonoBehaviour
       {
          if (_hand.IsItemInInventory())
          {
-            Debug.Log(_hand.GetItemHand());
+            Debug.Log("Caer");
             // _hand.GetItem();
          }
       }

@@ -87,7 +87,6 @@ public class ItemGrid : MonoBehaviour
         if (itemGridType == ItemGridType.Hand)
         {
             _isItemInInventory = true;
-            Debug.Log("Items place: " + _isItemInInventory);
         }
         
         RectTransform rectTransform = inventoryItem.GetComponent<RectTransform>();
@@ -128,7 +127,6 @@ public class ItemGrid : MonoBehaviour
         if (itemGridType == ItemGridType.Hand)
         {
             _isItemInInventory = false;
-            Debug.Log("Items: " + _isItemInInventory);
         }
 
         ClearGridReference(toReturn);

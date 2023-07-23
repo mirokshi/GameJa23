@@ -161,7 +161,6 @@ public class InventoryController : MonoBehaviour
     
     private void InsertItemHand(InventoryItem itemToInsert)
     {
-        Debug.Log("Ha cogido item a Hand");
         Vector2Int? posOnGrid = handInventory.FindSpaceForObject(itemToInsert);
         
         if (posOnGrid ==  null) {return;}

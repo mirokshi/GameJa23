@@ -63,7 +63,6 @@ public class InventoryItem : MonoBehaviour
 
     public void OnDestroy()
     {
-        Debug.Log("GameObject " + _itemData.name + " is being destroyed!"); // DELETE LATER
         Destroy(gameObject);
     }
 }
