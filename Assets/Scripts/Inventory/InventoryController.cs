@@ -58,8 +58,7 @@ public class InventoryController : MonoBehaviour
         {
             RotateItem();
         }
-
-
+        
         if (selectedItemGrid == null)
         {
             _inventoryHighlight.Show(false);
@@ -163,8 +162,8 @@ public class InventoryController : MonoBehaviour
         Vector2 position = Input.mousePosition;
         if (selectedItem != null)
         {
-            position.x -= (selectedItem.WIDTH - 1) * ItemGrid.tileSizeWidth / 2;
-            position.y += (selectedItem.HEIGHT - 1) * ItemGrid.tileSizeHeight / 2;
+            position.x -= (selectedItem.WIDTH - 1) * ItemGrid.TileSizeWidth / 2;
+            position.y += (selectedItem.HEIGHT - 1) * ItemGrid.TileSizeHeight / 2;
         }
         
         return selectedItemGrid.GetTileGridPosition(position);
@@ -173,6 +172,7 @@ public class InventoryController : MonoBehaviour
     private void PlaceItem(Vector2Int tileGridPosition)
     {
         bool complete= selectedItemGrid.PlaceItem(selectedItem, tileGridPosition.x, tileGridPosition.y, ref overlapItem);
+        
         if (complete)
         {
             selectedItem = null;
@@ -184,8 +184,8 @@ public class InventoryController : MonoBehaviour
                 _rectTransform.SetAsLastSibling();
             }
         }
-        
     }
+
     private void PickUpItem(Vector2Int tileGridPosition)
     {
         selectedItem = selectedItemGrid.PickUpItem(tileGridPosition.x, tileGridPosition.y);
