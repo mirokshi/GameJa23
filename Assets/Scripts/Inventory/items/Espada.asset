@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b23f6c37cdebb8b4a956dfbe7c83750a, type: 3}
   m_Name: Espada
   m_EditorClassIdentifier: 
+  itemType: 4
   width: 1
   height: 3
   peso: 9
