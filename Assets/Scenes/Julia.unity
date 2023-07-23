@@ -234,6 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4a546af63303c346b74a8117436fefa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  handInventory: {fileID: 0}
   items:
   - {fileID: 11400000, guid: 41d4232838dab1947b3b7fc1a3a1dc59, type: 2}
   - {fileID: 11400000, guid: aa2e8070b6aff35419d5bf0b2fd7a83b, type: 2}
@@ -454,6 +455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridSizeWidth: 4
   gridSizeHeight: 4
+  itemGridType: 0
 --- !u!114 &1526031126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -773,6 +775,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridSizeWidth: 15
   gridSizeHeight: 6
+  itemGridType: 0
 --- !u!1 &2133447698
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,6 +842,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridSizeWidth: 4
   gridSizeHeight: 4
+  itemGridType: 0
 --- !u!114 &2133447702
 MonoBehaviour:
   m_ObjectHideFlags: 0

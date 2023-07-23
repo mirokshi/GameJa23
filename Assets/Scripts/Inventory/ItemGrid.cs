@@ -79,17 +79,17 @@ public class ItemGrid : MonoBehaviour
             OnThrowItem?.Invoke(inventoryItem);
         }
 
-        if (itemGridType == ItemGridType.Hand)
-        {
-            _isItemInInventory = true;
-            Debug.Log("Items place: " + _isItemInInventory);
-        }
-
         return true;
     }
 
     public void PlaceItem(InventoryItem inventoryItem, int posX, int posY)
     {
+        if (itemGridType == ItemGridType.Hand)
+        {
+            _isItemInInventory = true;
+            Debug.Log("Items place: " + _isItemInInventory);
+        }
+        
         RectTransform rectTransform = inventoryItem.GetComponent<RectTransform>();
         rectTransform.SetParent(_rectTransform);
 

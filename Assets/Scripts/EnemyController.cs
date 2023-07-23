@@ -21,7 +21,10 @@ public class EnemyController : MonoBehaviour
         foreach (Collider2D collider in colliders)
         {
             Debug.Log(collider.name);
-            collider.GetComponent<PlayerController>()._isDead = true;
+            if (collider.CompareTag("Player"))
+            {
+                collider.GetComponent<PlayerController>()._isDead = true;
+            }
         }
 
     }
