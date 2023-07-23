@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-[CreateAssetMenu(fileName = "TODO",menuName = "ITEM",order = 0)]
+[CreateAssetMenu(fileName = "itemName",menuName = "Item", order = 0)]
 public class ItemData : ScriptableObject
 {
+    public ItemType itemType;
     public int width = 1;
     public int height =1;
     

@@ -242,7 +242,7 @@ public class ItemGrid : MonoBehaviour
         return true;
     }
 
-    public bool isItemInInventory()
+    public bool IsItemInInventory()
     {
         if (itemGridType == ItemGridType.Hand)
             return _isItemInInventory;
