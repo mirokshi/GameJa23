@@ -9,6 +9,8 @@ public class InventoryItem : MonoBehaviour
 {
     public ItemData _itemData;
 
+    public string id;
+
     public int HEIGHT
     {
         get
@@ -46,10 +48,12 @@ public class InventoryItem : MonoBehaviour
         _itemData = itemData;
         GetComponent<Image>().sprite = itemData.itemIcon;
         
-        Vector2 size = new Vector2();
-        size.x = WIDTH * ItemGrid.TileSizeWidth;
-        size.y = HEIGHT * ItemGrid.TileSizeHeight;
-        
+        Vector2 size = new Vector2
+        {
+            x = WIDTH * ItemGrid.TileSizeWidth,
+            y = HEIGHT * ItemGrid.TileSizeHeight
+        };
+
         GetComponent<RectTransform>().sizeDelta = size;
     }
 

@@ -179,30 +179,33 @@ public class ItemGrid : MonoBehaviour
         }
         return true;
     }
+    
+     private bool OverlapCheck(int posX, int posY, int width, int height, ref InventoryItem overlapItem)
+     {
+         for (int x = 0; x < width; x++)
+         {
+             for (int y = 0; y < height; y++)
+             {
+                 if (InventoryItemSlot[posX + x, posY + y] != null)
+                 {
+                     if (overlapItem == null)
+                     {
+                         overlapItem = InventoryItemSlot[posX + x, posY + y];
+                     }
+                     else
+                     {
+                         if (overlapItem != InventoryItemSlot[posX + x, posY + y])
+                         {
+                             return false;
+                         }
+                     }
+                 }
+             }
+         }
+         return true;
+     }
 
-    private bool OverlapCheck(int posX, int posY, int width, int height, ref InventoryItem overlapItem)
-    {
-        for (int x = 0; x < width; x++)
-        {
-            for (int y = 0; y < height; y++)
-            {
-                if (InventoryItemSlot[posX+x,posY+y] != null)
-                {
-                    overlapItem = InventoryItemSlot[posX + x, posY + y];
-                }
-                else
-                {
-                    if (overlapItem != InventoryItemSlot[posX + x, posY + y])
-                    {
-                        return false;
-                    }
-                }
-            }
-        }
-        return true;
-    }
-
-    internal InventoryItem GetItem(int x, int y)
+     internal InventoryItem GetItem(int x, int y)
     {
         return InventoryItemSlot[x, y];
     }
