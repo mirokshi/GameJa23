@@ -12,12 +12,11 @@ public class ItemGrid : MonoBehaviour
     public const float TileSizeHeight = 32;
     
     public static Action<InventoryItem> OnThrowItem;
-    public static Action OnOnlyOneItem;
-
+    
     private RectTransform _rectTransform;
     
-    private Vector2 _positionOnTheGrid = new Vector2();
-    private Vector2Int _tileGridPosition = new Vector2Int();
+    private Vector2 _positionOnTheGrid;
+    private Vector2Int _tileGridPosition;
 
     private InventoryItem[,] InventoryItemSlot;
 
@@ -26,7 +25,6 @@ public class ItemGrid : MonoBehaviour
     [SerializeField] private int gridSizeWidth=7;
     [SerializeField] private int gridSizeHeight=4;
     [SerializeField] private ItemGridType itemGridType;
-    
 
     private void Start()
     {
@@ -52,27 +50,27 @@ public class ItemGrid : MonoBehaviour
         return _tileGridPosition;
     }
 
-    public bool PlaceItem(InventoryItem inventoryItem, int posX, int posY, ref InventoryItem overlapITem)
+    public bool PlaceItem(InventoryItem inventoryItem, int posX, int posY, ref InventoryItem overlapItem)
     {
         if (BoundryCheck(posX,posY,inventoryItem.WIDTH,inventoryItem.HEIGHT)==false)
         {
             return false;
         }
 
-        if (OverlapCheck(posX,posY,inventoryItem.WIDTH,inventoryItem.HEIGHT,ref overlapITem) == false)
+        if (OverlapCheck(posX, posY, inventoryItem.WIDTH,inventoryItem.HEIGHT, ref overlapItem) == false)
         {
-            overlapITem = null;
+            overlapItem = null;
             return false;
         }
         
-        if (itemGridType == ItemGridType.Hand && _isItemInInventory && overlapITem == null)
+        if (itemGridType == ItemGridType.Hand && _isItemInInventory && overlapItem == null)
         {
             return false;
         }
 
-        if (overlapITem != null)
+        if (overlapItem != null)
         {
-            ClearGridReference(overlapITem);
+            ClearGridReference(overlapItem);
         }
 
         PlaceItem(inventoryItem, posX, posY);
@@ -196,7 +194,7 @@ public class ItemGrid : MonoBehaviour
                 {
                     if (overlapItem != InventoryItemSlot[posX + x, posY + y])
                     {
-                        return false;   
+                        return false;
                     }
                 }
             }

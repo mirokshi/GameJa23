@@ -49,6 +49,7 @@ public class InventoryItem : MonoBehaviour
         Vector2 size = new Vector2();
         size.x = WIDTH * ItemGrid.TileSizeWidth;
         size.y = HEIGHT * ItemGrid.TileSizeHeight;
+        
         GetComponent<RectTransform>().sizeDelta = size;
     }
 
