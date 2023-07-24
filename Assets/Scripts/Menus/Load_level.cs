@@ -11,6 +11,7 @@ public class Load_level : MonoBehaviour
     public string level;
     public TextMeshProUGUI text;
     public string message;
+
     public Animator Animator;
 
     private void Start()
