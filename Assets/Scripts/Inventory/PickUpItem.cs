@@ -9,8 +9,6 @@ public class PickUpItem : MonoBehaviour
 
     private InventoryItem _inventoryItem;
 
-    public LayerMask objectName;
-
     private void Awake()
     {
         _inventoryItem = GetComponent<InventoryItem>();

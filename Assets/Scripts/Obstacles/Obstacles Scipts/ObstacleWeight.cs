@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObstacleWeight : ObstacleAction
 {
-    public override void DoAction()
+    public override void DoAction(ItemData itemData)
     {
         Debug.Log("Success! (Weight)");
     }

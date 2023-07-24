@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b23f6c37cdebb8b4a956dfbe7c83750a, type: 3}
   m_Name: PocionSlow
   m_EditorClassIdentifier: 
-  itemType: 1
+  obstacleType: 0
+  itemType: 6
+  name: 
   width: 1
   height: 2
   peso: 3

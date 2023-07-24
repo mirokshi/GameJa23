@@ -21,6 +21,6 @@ public class PlayerController : MonoBehaviour
 
     private void OnEnable()
     {
-        throw new NotImplementedException();
+        
     }
 }

@@ -636,6 +636,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 4
+  launchDirection: {x: 2, y: 5, z: 0}
+  launchForce: 20
 --- !u!114 &707229881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1014,24 +1016,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1247111210 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1435872253890291077, guid: 8cf8424d96141254ba24a6ca9d035320, type: 3}
-  m_PrefabInstance: {fileID: 1266444332}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1247111215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1247111210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c243035b0e082804c94c6673cc9761fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obstacleData: {fileID: 11400000, guid: 0eb2ad20063f4734884b5777b5b81b4d, type: 2}
 --- !u!1001 &1266444332
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1039,33 +1023,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 493721085883762042, guid: 8cf8424d96141254ba24a6ca9d035320, type: 3}
-      propertyPath: m_BodyType
+    - target: {fileID: 548804582282611066, guid: 8cf8424d96141254ba24a6ca9d035320, type: 3}
+      propertyPath: launchForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 548804582282611066, guid: 8cf8424d96141254ba24a6ca9d035320, type: 3}
+      propertyPath: launchDirection.x
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 548804582282611066, guid: 8cf8424d96141254ba24a6ca9d035320, type: 3}
+      propertyPath: launchDirection.y
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1435872253890291077, guid: 8cf8424d96141254ba24a6ca9d035320, type: 3}
       propertyPath: m_Name
-      value: Agujero
-      objectReference: {fileID: 0}
-    - target: {fileID: 1435872253890291077, guid: 8cf8424d96141254ba24a6ca9d035320, type: 3}
-      propertyPath: m_TagString
-      value: Obstacle
+      value: Hole
       objectReference: {fileID: 0}
     - target: {fileID: 5242462367631702796, guid: 8cf8424d96141254ba24a6ca9d035320, type: 3}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5242462367631702796, guid: 8cf8424d96141254ba24a6ca9d035320, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 7.2604012
-      objectReference: {fileID: 0}
-    - target: {fileID: 5242462367631702796, guid: 8cf8424d96141254ba24a6ca9d035320, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 7.440535
-      objectReference: {fileID: 0}
-    - target: {fileID: 5242462367631702796, guid: 8cf8424d96141254ba24a6ca9d035320, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5242462367631702796, guid: 8cf8424d96141254ba24a6ca9d035320, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1107,19 +1083,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5243400523236748146, guid: 8cf8424d96141254ba24a6ca9d035320, type: 3}
-      propertyPath: m_Size.x
-      value: 0.28129622
-      objectReference: {fileID: 0}
-    - target: {fileID: 5243400523236748146, guid: 8cf8424d96141254ba24a6ca9d035320, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.019351885
-      objectReference: {fileID: 0}
-    - target: {fileID: 5243400523236748146, guid: 8cf8424d96141254ba24a6ca9d035320, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1247111215, guid: 8cf8424d96141254ba24a6ca9d035320, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8cf8424d96141254ba24a6ca9d035320, type: 3}
 --- !u!1001 &1416702243
 PrefabInstance:
@@ -1738,6 +1703,10 @@ PrefabInstance:
     - target: {fileID: 2738841982478249466, guid: cf56a0433d890974b8e9fe216af5011c, type: 3}
       propertyPath: m_Name
       value: Trampolin
+      objectReference: {fileID: 0}
+    - target: {fileID: 2738841982478249466, guid: cf56a0433d890974b8e9fe216af5011c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2738841982478249470, guid: cf56a0433d890974b8e9fe216af5011c, type: 3}
       propertyPath: m_RootOrder

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Bridge
   m_EditorClassIdentifier: 
   name: Bridge
-  itemType: 0
+  itemType: 6
   sprite: {fileID: 0}

@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b23f6c37cdebb8b4a956dfbe7c83750a, type: 3}
   m_Name: Cofre
   m_EditorClassIdentifier: 
-  itemType: 5
+  obstacleType: 0
+  itemType: 8
+  name: 
   width: 3
   height: 3
   peso: 30
