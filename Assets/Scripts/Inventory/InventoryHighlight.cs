@@ -6,7 +6,6 @@ using UnityEngine;
 public class InventoryHighlight : MonoBehaviour
 {
     [SerializeField] private RectTransform highlighter;
-    [SerializeField] private Canvas _canvas;
 
     public void Show(bool b)
     {
@@ -26,7 +25,7 @@ public class InventoryHighlight : MonoBehaviour
     {
         Vector2 pos = targetGrid.CalculatePositionGrid(targetItem, targetItem.onGridPositionX, targetItem.onGridPositionY);
 
-        highlighter.localPosition = pos / _canvas.scaleFactor;
+        highlighter.localPosition = pos;
     }
 
     public void SetParent(ItemGrid targetGrid)
