@@ -248,11 +248,11 @@ public class ItemGrid : MonoBehaviour
         return false;
     }
 
-    public ItemData GetItemHand()
+    public ItemData GetItemInHand()
     {
-        for (int x = 0; x < gridSizeWidth; x++)
+        for (var x = 0; x < gridSizeWidth; x++)
         {
-            for (int y = 0; y < gridSizeHeight; y++)
+            for (var y = 0; y < gridSizeHeight; y++)
             {
                 if (InventoryItemSlot[x,y] != null)
                 {
