@@ -8,8 +8,6 @@ public class PlayerController : MonoBehaviour
     private CapsuleCollider2D _capsuleCollider;
     public bool _isDead;
 
-    public static Action OnStop;
-    
     void Start()
     {
         _capsuleCollider = GetComponent<CapsuleCollider2D>();
@@ -24,10 +22,14 @@ public class PlayerController : MonoBehaviour
     private void OnEnable()
     {
         ObstacleController.OnDeath += DeathTrigger;
+        UseItem.OnDeath += DeathTrigger;
+        ObstacleWeight.OnDeath += DeathTrigger;
     }
 
     private void OnDisable()
     {
         ObstacleController.OnDeath -= DeathTrigger;
+        UseItem.OnDeath -= DeathTrigger;
+        ObstacleWeight.OnDeath -= DeathTrigger;
     }
 }

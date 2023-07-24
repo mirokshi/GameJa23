@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,9 +6,20 @@ using UnityEngine;
 public class ObstacleWeight : ObstacleAction
 {
     [SerializeField] private GameObject bridge;
-    public override void DoAction(ItemData itemData)
+
+    public static Action OnDeath;
+    
+    public override void DoAction(ItemData itemData, float weight)
     {
         Debug.Log("Success! (Weight)");
-        bridge.SetActive(true);
+        Debug.Log("Player weight: " + weight);
+        if (weight <= obstacleData.weight)
+        {
+            bridge.SetActive(true);
+        }
+        else
+        {
+            OnDeath?.Invoke();
+        }
     }
 }
