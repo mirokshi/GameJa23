@@ -6,6 +6,7 @@ TagManager:
   tags:
   - InventoryHand
   - Obstacle
+  - Tutorial
   layers:
   - Default
   - TransparentFX

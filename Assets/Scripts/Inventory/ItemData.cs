@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ using UnityEngine.Serialization;
 public class ItemData : ScriptableObject
 {
     public ItemType itemType;
+    public string name;
     public int width = 1;
     public int height =1;
     
