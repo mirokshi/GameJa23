@@ -600,18 +600,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 654594080}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: click
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &654594076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -761,6 +749,7 @@ MonoBehaviour:
   level: Credits
   text: {fileID: 0}
   message: 
+  Animator: {fileID: 1364018847}
 --- !u!95 &654594080
 Animator:
   serializedVersion: 5
@@ -1074,18 +1063,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 903907281}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: click
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &903907277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1235,6 +1212,7 @@ MonoBehaviour:
   level: Options
   text: {fileID: 0}
   message: 
+  Animator: {fileID: 1364018847}
 --- !u!95 &903907281
 Animator:
   serializedVersion: 5
@@ -1437,18 +1415,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1406698473}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: click
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1406698469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1598,6 +1564,7 @@ MonoBehaviour:
   level: 
   text: {fileID: 0}
   message: 
+  Animator: {fileID: 1364018847}
 --- !u!95 &1406698473
 Animator:
   serializedVersion: 5
@@ -2015,18 +1982,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: click
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1974362169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2176,6 +2131,7 @@ MonoBehaviour:
   level: Level-Selector
   text: {fileID: 0}
   message: 
+  Animator: {fileID: 1364018847}
 --- !u!95 &1974362173
 Animator:
   serializedVersion: 5
