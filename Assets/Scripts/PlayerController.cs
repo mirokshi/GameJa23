@@ -17,10 +17,16 @@ public class PlayerController : MonoBehaviour
     public void DeathTrigger()
     {
         Debug.Log("Player is dead");
+        _isDead = true;
     }
 
     private void OnEnable()
     {
-        
+        ObstacleController.OnDeath += DeathTrigger;
+    }
+
+    private void OnDisable()
+    {
+        ObstacleController.OnDeath -= DeathTrigger;
     }
 }

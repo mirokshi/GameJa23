@@ -21,6 +21,7 @@ public class ObstacleController : MonoBehaviour
         {
             DeathTrigger();
         }
+        
         else
         {
             Debug.Log("Player avoids the Obstacle");
@@ -38,19 +39,9 @@ public class ObstacleController : MonoBehaviour
         return false;
     }
 
-    public void DeathTrigger()
+    private void DeathTrigger()
     {
         Debug.Log("Dead");
-        //OnDeath?.Invoke();
-    }
-    
-    private void OnEnable()
-    {
-        UseItem.OnDestroyObstacle += OnDestroyObstacle;
-    }
-
-    private void OnDisable()
-    {
-        UseItem.OnDestroyObstacle -= OnDestroyObstacle;
+        OnDeath?.Invoke();
     }
 }

@@ -24,7 +24,7 @@ public class UseItem : MonoBehaviour
 
    private void DeathTrigger()
    {
-      OnDeath?.Invoke();
+      Debug.Log("You are Dead");
    }
 
    private void OnTriggerEnter2D(Collider2D collider)
@@ -35,7 +35,7 @@ public class UseItem : MonoBehaviour
          {
             var itemData = _hand.GetItemInHand();
             Debug.Log("Usar Objeto");
-            OnDestroyObstacle?.Invoke(itemData);
+            collider.gameObject.GetComponent<ObstacleController>().OnDestroyObstacle(itemData);
          }
          else
          {

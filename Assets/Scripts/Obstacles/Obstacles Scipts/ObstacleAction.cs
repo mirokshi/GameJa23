@@ -5,7 +5,7 @@ using UnityEngine;
 
 public abstract class ObstacleAction : MonoBehaviour
 {
-    [SerializeField] private ObstacleData obstacleData;
+    [SerializeField] protected ObstacleData obstacleData;
 
     public ObstacleType GetItemType()
     {
@@ -13,4 +13,6 @@ public abstract class ObstacleAction : MonoBehaviour
     }
 
     public abstract void DoAction(ItemData itemData);
+    
+    
 }

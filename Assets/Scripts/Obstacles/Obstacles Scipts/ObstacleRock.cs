@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class ObstacleRock : ObstacleAction
 {
+    
     public override void DoAction(ItemData itemData)
     {
         Debug.Log("Success! (Rock)");
+        Destroy(gameObject);
     }
 }
