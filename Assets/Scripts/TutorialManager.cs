@@ -40,7 +40,9 @@ public class TutorialManager : MonoBehaviour
     private void ShowCurrentStep()
     {
         HideAllTutorialTexts();
+        button.SetActive(true);
         tutorialTexts[currentStep].SetActive(true);
+        
     }
 
     private void HideAllTutorialTexts()
