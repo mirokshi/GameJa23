@@ -1751,14 +1751,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7893838409903371356, guid: 9e10e7e3766a164429ff2c5b7e574083, type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8874567066775562217, guid: 9e10e7e3766a164429ff2c5b7e574083, type: 3}
-      propertyPath: Animator
-      value: 
-      objectReference: {fileID: 1023837453}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e10e7e3766a164429ff2c5b7e574083, type: 3}
 --- !u!224 &7598413909448774852 stripped

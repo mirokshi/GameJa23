@@ -11,7 +11,6 @@ public class Load_level : MonoBehaviour
     public string level;
     public TextMeshProUGUI text;
     public string message;
-    public Animator Animator;
 
     private void Start()
     {
@@ -25,7 +24,6 @@ public class Load_level : MonoBehaviour
 
     IEnumerator load()
     {
-        Animator.SetTrigger("start");
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(level);
     }
