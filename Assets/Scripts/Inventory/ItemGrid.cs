@@ -20,13 +20,15 @@ public class ItemGrid : MonoBehaviour
     private InventoryItem[,] InventoryItemSlot;
 
     private bool _isItemInInventory;
-    
+    private int _totalWeight;
+
     [SerializeField] private int gridSizeWidth=7;
     [SerializeField] private int gridSizeHeight=4;
     [SerializeField] private ItemGridType itemGridType;
-    
-    private void Start()
+
+    private void Awake()
     {
+        _totalWeight = 0;
         _rectTransform = GetComponent<RectTransform>();
         Init(gridSizeWidth,gridSizeHeight);
     }
@@ -88,6 +90,8 @@ public class ItemGrid : MonoBehaviour
         {
             _isItemInInventory = true;
         }
+
+        _totalWeight += inventoryItem._itemData.weight;
         
         RectTransform rectTransform = inventoryItem.GetComponent<RectTransform>();
         rectTransform.SetParent(_rectTransform);
@@ -128,6 +132,8 @@ public class ItemGrid : MonoBehaviour
         {
             _isItemInInventory = false;
         }
+        
+        _totalWeight -= toReturn._itemData.weight;
 
         ClearGridReference(toReturn);
 
@@ -243,8 +249,10 @@ public class ItemGrid : MonoBehaviour
     public bool IsItemInInventory()
     {
         if (itemGridType == ItemGridType.Hand)
+        {
             return _isItemInInventory;
-        
+        }
+
         return false;
     }
 
@@ -279,30 +287,14 @@ public class ItemGrid : MonoBehaviour
         }
     }
 
-    public int CalculateTotalInventoryValue()
+    public int GetTotalWeight()
     {
+        if (_totalWeight == 0)
         {
-            int totalValue = 0;
-            List<InventoryItem> items = new List<InventoryItem>();
-
-            for (int x = 0; x < gridSizeWidth; x++)
-            {
-                for (int y = 0; y < gridSizeHeight; y++)
-                {
-                    if (InventoryItemSlot[x, y] != null)
-                    {
-                        InventoryItem item = InventoryItemSlot[x, y];
-
-                        if (!items.Contains(item))
-                        {
-                            items.Add(item);
-                            totalValue += item._itemData.valor; // Add the item's variableValue to the totalValue
-                        }
-                    }
-                }
-            }
-
-            return totalValue;
+            return 1;
         }
+        
+        return _totalWeight;
     }
+    
 }

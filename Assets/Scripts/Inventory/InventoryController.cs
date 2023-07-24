@@ -34,19 +34,9 @@ public class InventoryController : MonoBehaviour
     private InventoryItem _itemToHighlight;
     private Vector2 _oldPosition;
 
-    private int _totalWeight
-    {
-        get => _totalWeight;
-        set
-        {
-            
-        }
-    }
-
     private void Awake()
     {
         _inventoryHighlight = GetComponent<InventoryHighlight>();
-        _totalWeight = 0;
     }
 
     private void Update()
@@ -83,6 +73,8 @@ public class InventoryController : MonoBehaviour
         {
             LeftMouseButtonPress();
         }
+        
+        Debug.Log("Inventory Weight: " + playerInventory.GetTotalWeight());
     }
 
     private void RotateItem()
