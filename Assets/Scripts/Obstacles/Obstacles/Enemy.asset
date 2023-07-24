@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Enemy
   m_EditorClassIdentifier: 
   name: Enemy
-  itemType: 4
+  obstacleType: 4
+  weight: 0
   sprite: {fileID: 0}
