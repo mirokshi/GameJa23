@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class EndLevel : MonoBehaviour
 {
     public string escena;
-    private ItemGrid itemGrid;
+    [SerializeField] private ItemGrid itemGrid;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -19,6 +19,6 @@ public class EndLevel : MonoBehaviour
 
     private int CalculateScore()
     {
-        return itemGrid.CalculateTotalInventoryValue();
+        return itemGrid.GetTotalValue();
     }
 }

@@ -21,6 +21,8 @@ public class ItemGrid : MonoBehaviour
 
     private bool _isItemInInventory;
     private int _totalWeight;
+    private int _totalValue;
+
 
     [SerializeField] private int gridSizeWidth=7;
     [SerializeField] private int gridSizeHeight=4;
@@ -29,6 +31,7 @@ public class ItemGrid : MonoBehaviour
     private void Awake()
     {
         _totalWeight = 0;
+        _totalValue = 0;
         _rectTransform = GetComponent<RectTransform>();
         Init(gridSizeWidth,gridSizeHeight);
     }
@@ -92,6 +95,7 @@ public class ItemGrid : MonoBehaviour
         }
 
         _totalWeight += inventoryItem._itemData.weight;
+        _totalValue += inventoryItem._itemData.value;
         
         RectTransform rectTransform = inventoryItem.GetComponent<RectTransform>();
         rectTransform.SetParent(_rectTransform);
@@ -134,6 +138,7 @@ public class ItemGrid : MonoBehaviour
         }
         
         _totalWeight -= toReturn._itemData.weight;
+        _totalValue -= toReturn._itemData.value;
 
         ClearGridReference(toReturn);
 
@@ -295,6 +300,11 @@ public class ItemGrid : MonoBehaviour
         }
         
         return _totalWeight;
+    }
+
+    public int GetTotalValue()
+    {
+        return _totalValue;
     }
     
 }
