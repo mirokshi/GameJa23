@@ -29,6 +29,8 @@ public class InventoryController : MonoBehaviour
     [SerializeField] GameObject itemPrefab;
     [SerializeField] private Transform canvasTransform;
 
+    [SerializeField] private Canvas _canvas;
+
     private InventoryHighlight _inventoryHighlight;
     InventoryItem itemToHighlight;
 
