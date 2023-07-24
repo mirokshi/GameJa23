@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Bridge
   obstacleType: 6
-  weight: 4
+  weight: 100
   sprite: {fileID: 0}

@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacleType: 3
   itemType: 7
-  name: 
+  name: PIckaxe
   width: 2
   height: 3
-  peso: 23
-  valor: 10
+  weight: 23
+  value: 10
   itemIcon: {fileID: 21300000, guid: c3a4f3f914f05c640b83aa66121917b0, type: 3}

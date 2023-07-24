@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b23f6c37cdebb8b4a956dfbe7c83750a, type: 3}
   m_Name: Tablon
   m_EditorClassIdentifier: 
+  obstacleType: 0
+  itemType: 0
+  name: Board
   width: 2
   height: 3
-  peso: 10
-  valor: 15
+  weight: 10
+  value: 15
   itemIcon: {fileID: 21300000, guid: 0547552024c89104d999bf388ef80a57, type: 3}

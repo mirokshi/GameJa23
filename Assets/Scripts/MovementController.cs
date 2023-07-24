@@ -13,6 +13,7 @@ public class MovementController : MonoBehaviour
     [SerializeField] private ItemGrid _inventory;
 
     public float currentWeight = 0f;
+    public float minusSpeed = 0.3f;
     public float adjustedSpeed = 0f;
 
     void Start()
@@ -23,12 +24,21 @@ public class MovementController : MonoBehaviour
 
     void Update()
     {
+        var minSpeed = baseSpeed - 2;
         currentWeight = _inventory.GetTotalWeight();
-        adjustedSpeed = baseSpeed * (1f - currentWeight / 10);
+        adjustedSpeed = baseSpeed - minusSpeed * (int) (currentWeight / 20);
         
         if (!_playerController._isDead)
         {
-            _rigidbody.velocity = new Vector2(adjustedSpeed, _rigidbody.velocity.y);
+            if (adjustedSpeed < minSpeed)
+            {
+                _rigidbody.velocity = new Vector2(minSpeed, _rigidbody.velocity.y);
+            }
+            else
+            {
+                _rigidbody.velocity = new Vector2(adjustedSpeed, _rigidbody.velocity.y);
+            }
+            
         }
     }
 
