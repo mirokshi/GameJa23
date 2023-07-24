@@ -7,8 +7,7 @@
         Flashlight,
         Shield,
         Sword,
-        PotionFast,
-        PotionSlow,
+        Potion,
         Pickaxe,
         Gold
     }
