@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-[CreateAssetMenu(fileName = "itemName",menuName = "Item", order = 0)]
+[CreateAssetMenu(fileName = "itemName",menuName = "Object/Item", order = 0)]
 public class ItemData : ScriptableObject
 {
     public ItemType itemType;
-    public string name;
+    public new string name;
     public int width = 1;
     public int height =1;
     

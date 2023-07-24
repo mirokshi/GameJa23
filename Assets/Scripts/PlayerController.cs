@@ -13,5 +13,14 @@ public class PlayerController : MonoBehaviour
     {
         _capsuleCollider = GetComponent<CapsuleCollider2D>();
     }
-    
+
+    public void DeathTrigger()
+    {
+        Debug.Log("Player is dead");
+    }
+
+    private void OnEnable()
+    {
+        throw new NotImplementedException();
+    }
 }

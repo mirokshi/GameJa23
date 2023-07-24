@@ -4,12 +4,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class ObstacleController : MonoBehaviour, IObstacle
+public class ObstacleController : MonoBehaviour
 {
-    [SerializeField] private ItemType itemType;
+    private ObstacleAction _obstacleAction;
     
     public static Action OnDeath;
-    
+
+    private void Awake()
+    {
+        _obstacleAction = GetComponent<ObstacleAction>();
+    }
+
     public void OnDestroyObstacle(ItemData itemData)
     {
         if (!IsAvoided(itemData))
@@ -18,14 +23,14 @@ public class ObstacleController : MonoBehaviour, IObstacle
         }
         else
         {
-            Debug.Log("Animación de destruir obstaculo");
-            Destroy(gameObject);
+            Debug.Log("Player avoids the Hole");
+            _obstacleAction.DoAction();
         }
     }
 
     public bool IsAvoided(ItemData itemData)
     {
-        if (itemType.Equals(itemData.itemType))
+        if (_obstacleAction.GetItemType().Equals(itemData.itemType))
         {
             return true;
         }
