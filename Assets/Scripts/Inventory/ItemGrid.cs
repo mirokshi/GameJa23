@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Inventory;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 using UnityEngine.Serialization;
@@ -27,6 +28,8 @@ public class ItemGrid : MonoBehaviour
     [SerializeField] private int gridSizeWidth=7;
     [SerializeField] private int gridSizeHeight=4;
     [SerializeField] private ItemGridType itemGridType;
+
+    public static Action<ItemData> OnUsePotion;
 
     private void Awake()
     {
@@ -82,6 +85,16 @@ public class ItemGrid : MonoBehaviour
         if (itemGridType == ItemGridType.Throw)
         {
             OnThrowItem?.Invoke(inventoryItem);
+        }
+
+        ItemType itemType = inventoryItem._itemData.itemType;
+        
+        if (itemGridType == ItemGridType.Hand && (itemType.Equals(ItemType.Potion)))
+        {
+            Debug.Log("Potion Activated");
+            OnUsePotion?.Invoke(inventoryItem._itemData);
+            _isItemInInventory = false;
+            inventoryItem.OnDestroy();
         }
 
         return true;
