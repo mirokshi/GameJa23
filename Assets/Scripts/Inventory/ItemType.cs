@@ -10,5 +10,6 @@ public enum ItemType
     Rock,
     Enemy,
     Gold,
+    Weight,
     Fake
 }

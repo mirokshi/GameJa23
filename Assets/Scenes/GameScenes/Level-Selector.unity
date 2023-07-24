@@ -1667,6 +1667,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: lvl-buton
       objectReference: {fileID: 0}
+    - target: {fileID: 5431989124362397686, guid: 9e10e7e3766a164429ff2c5b7e574083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431989124362397686, guid: 9e10e7e3766a164429ff2c5b7e574083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431989124362397686, guid: 9e10e7e3766a164429ff2c5b7e574083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 7598413909448774853}
+    - target: {fileID: 5431989124362397686, guid: 9e10e7e3766a164429ff2c5b7e574083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431989124362397686, guid: 9e10e7e3766a164429ff2c5b7e574083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431989124362397686, guid: 9e10e7e3766a164429ff2c5b7e574083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7319692150093213919, guid: 9e10e7e3766a164429ff2c5b7e574083, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1751,10 +1775,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7893838409903371356, guid: 9e10e7e3766a164429ff2c5b7e574083, type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 8874567066775562217, guid: 9e10e7e3766a164429ff2c5b7e574083, type: 3}
       propertyPath: Animator
       value: 
@@ -1764,5 +1784,10 @@ PrefabInstance:
 --- !u!224 &7598413909448774852 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7319692150093213919, guid: 9e10e7e3766a164429ff2c5b7e574083, type: 3}
+  m_PrefabInstance: {fileID: 7598413909448774851}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &7598413909448774853 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7669095251066229873, guid: 9e10e7e3766a164429ff2c5b7e574083, type: 3}
   m_PrefabInstance: {fileID: 7598413909448774851}
   m_PrefabAsset: {fileID: 0}
