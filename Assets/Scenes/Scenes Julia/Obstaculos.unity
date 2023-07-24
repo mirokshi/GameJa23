@@ -1031,7 +1031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c243035b0e082804c94c6673cc9761fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemType: 0
+  obstacleData: {fileID: 11400000, guid: 0eb2ad20063f4734884b5777b5b81b4d, type: 2}
 --- !u!1001 &1266444332
 PrefabInstance:
   m_ObjectHideFlags: 0
