@@ -4,6 +4,7 @@ using UnityEngine;
 
 public interface IObstacle
 {
-    bool IsAvoided();
+    void OnDestroyObstacle(ItemData itemData);
+    bool IsAvoided(ItemData itemData);
     void DeathTrigger();
 }

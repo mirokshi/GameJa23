@@ -10,19 +10,19 @@ public class UseItem : MonoBehaviour
    [SerializeField] private ItemGrid _hand;
 
    public static Action OnDeath;
+   public static Action<ItemData> OnDestroyObstacle;
 
-   public bool IsAvoided()
+   private bool HasItemInHand()
    {
       if (!_hand.IsItemInInventory())
       {
          return false;
       }
 
-
-      return false;
+      return true;
    }
 
-   public void DeathTrigger()
+   private void DeathTrigger()
    {
       OnDeath?.Invoke();
    }
@@ -31,12 +31,16 @@ public class UseItem : MonoBehaviour
    {
       if (collider.CompareTag("Obstacle"))
       {
-         if (_hand.IsItemInInventory())
+         if (HasItemInHand())
          {
-            Debug.Log("Caer");
-            // _hand.GetItem();
+            var itemData = _hand.GetItemInHand();
+            Debug.Log("Usar Objeto");
+            OnDestroyObstacle?.Invoke(itemData);
+         }
+         else
+         {
+            DeathTrigger();
          }
       }
    }
-
 }
