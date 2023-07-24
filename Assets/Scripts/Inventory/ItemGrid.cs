@@ -264,4 +264,26 @@ public class ItemGrid : MonoBehaviour
         return null;
     }
     
+    public int CalculateTotalInventoryValue()
+    {
+        int totalValue = 0;
+        List<InventoryItem> items = new List<InventoryItem>();
+
+        for (int x = 0; x < gridSizeWidth; x++)
+        {
+            for (int y = 0; y < gridSizeHeight; y++)
+            {
+                InventoryItem item = InventoryItemSlot[x, y];
+                
+                if (item != null && !items.Contains(item))
+                {
+                    items.Add(item);
+                    totalValue += item._itemData.valor; // Add the item's variableValue to the totalValue
+                }
+            }
+        }
+
+        return totalValue;
+    }
+    
 }
