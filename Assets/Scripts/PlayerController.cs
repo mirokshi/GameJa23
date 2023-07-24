@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private CapsuleCollider2D _capsuleCollider;
-    public bool _isDead;
+    public bool _isDead = false;
 
     public static Action OnStop;
     

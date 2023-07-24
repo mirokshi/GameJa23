@@ -7,7 +7,7 @@ public class MovementController : MonoBehaviour
 {
     public float velocity;
     private Rigidbody2D _rigidbody;
-    private PlayerController _playerController;
+    public  PlayerController _playerController;
 
     void Start()
     {
@@ -17,7 +17,7 @@ public class MovementController : MonoBehaviour
 
     void Update()
     {
-        if (!_playerController._isDead)
+        if (_playerController._isDead == false)
         {
             _rigidbody.velocity = new Vector2(velocity, _rigidbody.velocity.y);
         }
