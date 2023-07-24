@@ -9,8 +9,6 @@ public class PickUpItem : MonoBehaviour
 
     private InventoryItem _inventoryItem;
 
-    public LayerMask objectName;
-
     private void Awake()
     {
         _inventoryItem = GetComponent<InventoryItem>();
@@ -21,8 +19,8 @@ public class PickUpItem : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             Debug.Log("Pick Up Item");
-            Destroy(gameObject);
             OnPickUpItem?.Invoke(_inventoryItem);
+            Destroy(gameObject);
         }
     }
 }

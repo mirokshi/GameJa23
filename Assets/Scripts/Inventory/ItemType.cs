@@ -1,15 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public enum ItemType
+﻿namespace Inventory
 {
-    Fall,
-    Potion,
-    LightUp,
-    Rock,
-    Enemy,
-    Gold,
-    Weight,
-    Fake
+    public enum ItemType
+    {
+        Board,
+        LaunchPad,
+        Flashlight,
+        Shield,
+        Sword,
+        PotionFast,
+        PotionSlow,
+        Pickaxe,
+        Gold
+    }
 }

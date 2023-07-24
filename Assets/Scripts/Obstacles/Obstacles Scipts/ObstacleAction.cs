@@ -5,12 +5,14 @@ using UnityEngine;
 
 public abstract class ObstacleAction : MonoBehaviour
 {
-    [SerializeField] private ObstacleData obstacleData;
+    [SerializeField] protected ObstacleData obstacleData;
 
-    public ItemType GetItemType()
+    public ObstacleType GetItemType()
     {
-        return obstacleData.itemType;
+        return obstacleData.obstacleType;
     }
 
-    public abstract void DoAction();
+    public abstract void DoAction(ItemData itemData);
+    
+    
 }

@@ -7,8 +7,9 @@ public class PlayerController : MonoBehaviour
 {
     private CapsuleCollider2D _capsuleCollider;
     public bool _isDead;
-    
 
+    public static Action OnStop;
+    
     void Start()
     {
         _capsuleCollider = GetComponent<CapsuleCollider2D>();
@@ -17,10 +18,16 @@ public class PlayerController : MonoBehaviour
     public void DeathTrigger()
     {
         Debug.Log("Player is dead");
+        _isDead = true;
     }
 
     private void OnEnable()
     {
-        throw new NotImplementedException();
+        ObstacleController.OnDeath += DeathTrigger;
+    }
+
+    private void OnDisable()
+    {
+        ObstacleController.OnDeath -= DeathTrigger;
     }
 }

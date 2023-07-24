@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Hole
   m_EditorClassIdentifier: 
   name: Hole
-  itemType: 6
+  itemType: 0
   sprite: {fileID: 0}

@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class ObstacleEnemy : ObstacleAction
 {
-    public override void DoAction()
+    public override void DoAction(ItemData itemData)
     {
         Debug.Log("Success! (Enemy)");
+        Destroy(gameObject);
     }
 }

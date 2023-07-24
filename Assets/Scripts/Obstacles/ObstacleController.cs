@@ -21,16 +21,17 @@ public class ObstacleController : MonoBehaviour
         {
             DeathTrigger();
         }
+        
         else
         {
-            Debug.Log("Player avoids the Hole");
-            _obstacleAction.DoAction();
+            Debug.Log("Player avoids the Obstacle");
+            _obstacleAction.DoAction(itemData);
         }
     }
 
-    public bool IsAvoided(ItemData itemData)
+    private bool IsAvoided(ItemData itemData)
     {
-        if (_obstacleAction.GetItemType().Equals(itemData.itemType))
+        if (_obstacleAction.GetItemType().Equals(itemData.obstacleType))
         {
             return true;
         }
@@ -38,13 +39,9 @@ public class ObstacleController : MonoBehaviour
         return false;
     }
 
-    public void DeathTrigger()
+    private void DeathTrigger()
     {
+        Debug.Log("Dead");
         OnDeath?.Invoke();
-    }
-    
-    private void OnEnable()
-    {
-        UseItem.OnDestroyObstacle += OnDestroyObstacle;
     }
 }
