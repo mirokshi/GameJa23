@@ -2189,7 +2189,7 @@ MonoBehaviour:
   Star1: {fileID: 946806795}
   TwoStarsScore: 7
   Star2: {fileID: 1241311546}
-  ThreeStarsScore: 22
+  ThreeStarsScore: 8
   Star3: {fileID: 359554675}
 --- !u!114 &2073683921
 MonoBehaviour:

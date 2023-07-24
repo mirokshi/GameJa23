@@ -1935,8 +1935,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 4
-  launchDirection: {x: 0, y: 1, z: 0}
-  launchForce: 10
 --- !u!114 &381669540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3821,8 +3819,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 4.1
-  launchDirection: {x: 0, y: 1, z: 0}
-  launchForce: 10
 --- !u!1 &1136228495
 GameObject:
   m_ObjectHideFlags: 0
@@ -6040,8 +6036,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 4
-  launchDirection: {x: 0, y: 1, z: 0}
-  launchForce: 10
 --- !u!114 &1690541928
 MonoBehaviour:
   m_ObjectHideFlags: 0
