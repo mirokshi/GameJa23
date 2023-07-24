@@ -796,6 +796,131 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2738841982478249470, guid: e964f15e0fa969d4fb6265ea0e60195f, type: 3}
   m_PrefabInstance: {fileID: 165108532}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &174243202
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1212807292}
+    m_Modifications:
+    - target: {fileID: 222206557, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 222206558, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
+      propertyPath: m_text
+      value: 'To use them, you have to put the item in the hand. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 222206558, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
+      propertyPath: m_fontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 222206560, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 222206560, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -18.287
+      objectReference: {fileID: 0}
+    - target: {fileID: 499929187, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 499929188, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 339
+      objectReference: {fileID: 0}
+    - target: {fileID: 499929188, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 189
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035239466, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035239467, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
+      propertyPath: m_text
+      value: To rotate press "R"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035239467, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
+      propertyPath: m_fontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035239469, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 367.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035239469, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -49
+      objectReference: {fileID: 0}
+    - target: {fileID: 4635719035808721853, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
+      propertyPath: m_Name
+      value: TutorialTrigger(2) (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7412027050027492981, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
+      propertyPath: tutorialTexts.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7412027050027492981, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
+      propertyPath: tutorialTexts.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7412027050027492981, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
+      propertyPath: tutorialTexts.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7412027050027492981, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
+      propertyPath: tutorialTexts.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711627437549815574, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711627437549815574, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 37.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711627437549815574, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711627437549815574, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711627437549815574, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711627437549815574, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711627437549815574, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711627437549815574, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711627437549815574, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711627437549815574, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7711627437549815574, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
 --- !u!1001 &187623398
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1934,6 +2059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlighter: {fileID: 372817461}
+  _canvas: {fileID: 0}
 --- !u!114 &519420035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2865,127 +2991,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2738841982478249470, guid: 9de2706ed10be794ca10aafa8f299b29, type: 3}
   m_PrefabInstance: {fileID: 915099782}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &929964023
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1212807292}
-    m_Modifications:
-    - target: {fileID: 222206557, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 222206558, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
-      propertyPath: m_text
-      value: 'To use them, you have to put the item in the hand. '
-      objectReference: {fileID: 0}
-    - target: {fileID: 222206558, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
-      propertyPath: m_fontSize
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 222206560, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 360
-      objectReference: {fileID: 0}
-    - target: {fileID: 222206560, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -18.287
-      objectReference: {fileID: 0}
-    - target: {fileID: 499929187, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 499929188, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 339
-      objectReference: {fileID: 0}
-    - target: {fileID: 499929188, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 189
-      objectReference: {fileID: 0}
-    - target: {fileID: 1035239466, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1035239467, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
-      propertyPath: m_text
-      value: 'To rotate an object press "R". '
-      objectReference: {fileID: 0}
-    - target: {fileID: 1035239467, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
-      propertyPath: m_fontSize
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 1035239469, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 367.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1035239469, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -49
-      objectReference: {fileID: 0}
-    - target: {fileID: 4635719035808721853, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
-      propertyPath: m_Name
-      value: TutorialTrigger(3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7412027050027492981, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
-      propertyPath: tutorialTexts.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7412027050027492981, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
-      propertyPath: tutorialTexts.Array.data[2]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7412027050027492981, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
-      propertyPath: tutorialTexts.Array.data[3]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7711627437549815574, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7711627437549815574, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 34.56
-      objectReference: {fileID: 0}
-    - target: {fileID: 7711627437549815574, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7711627437549815574, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7711627437549815574, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7711627437549815574, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7711627437549815574, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7711627437549815574, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7711627437549815574, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7711627437549815574, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7711627437549815574, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
 --- !u!1 &930955031
 GameObject:
   m_ObjectHideFlags: 0
@@ -3412,11 +3417,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1054558119}
   m_CullTransparentMesh: 1
---- !u!4 &1102739013 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7711627437549815574, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
-  m_PrefabInstance: {fileID: 929964023}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1123629381
 GameObject:
   m_ObjectHideFlags: 0
@@ -3790,7 +3790,7 @@ Transform:
   m_Children:
   - {fileID: 7412027050027492980}
   - {fileID: 215832278}
-  - {fileID: 1102739013}
+  - {fileID: 2142990441}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6219,6 +6219,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2738841982478249470, guid: 70476aafa61ec0949ae6cdbc50ce5e3d, type: 3}
   m_PrefabInstance: {fileID: 2134411663}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2142990441 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7711627437549815574, guid: cfa2db453d5d06443bba920b85e9e1d0, type: 3}
+  m_PrefabInstance: {fileID: 174243202}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &2147247151 stripped
 RectTransform:

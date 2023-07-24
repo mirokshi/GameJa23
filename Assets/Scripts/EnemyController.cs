@@ -20,7 +20,6 @@ public class EnemyController : MonoBehaviour
 
         foreach (Collider2D collider in colliders)
         {
-            Debug.Log(collider.name);
             if (collider.CompareTag("Player"))
             {
                 collider.GetComponent<PlayerController>()._isDead = true;
