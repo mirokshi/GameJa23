@@ -667,6 +667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handInventory: {fileID: 1526031125}
+  playerInventory: {fileID: 2089677631}
   items:
   - {fileID: 11400000, guid: 9bea542e23578164993739d895c10499, type: 2}
   - {fileID: 11400000, guid: 6cd47813a4fc0a5438ba82186d864e61, type: 2}
