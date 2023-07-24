@@ -7,8 +7,9 @@ public class PlayerController : MonoBehaviour
 {
     private CapsuleCollider2D _capsuleCollider;
     public bool _isDead;
-    
 
+    public static Action OnStop;
+    
     void Start()
     {
         _capsuleCollider = GetComponent<CapsuleCollider2D>();

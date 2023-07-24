@@ -36,6 +36,7 @@ public class UseItem : MonoBehaviour
             var itemData = _hand.GetItemInHand();
             Debug.Log("Usar Objeto");
             collider.gameObject.GetComponent<ObstacleController>().OnDestroyObstacle(itemData);
+            _hand.OnDestroyItemInHand();
          }
          else
          {
