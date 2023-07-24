@@ -23,8 +23,8 @@ public class ShowStars : MonoBehaviour
 
     public void showStars()
     {
-        if (totalScore > OneStarScore) Star1.SetActive(true);
-        if (totalScore > TwoStarsScore) Star2.SetActive(true);
-        if (totalScore > ThreeStarsScore) Star3.SetActive(true);
+        if (totalScore >= OneStarScore) Star1.SetActive(true);
+        if (totalScore >= TwoStarsScore) Star2.SetActive(true);
+        if (totalScore >= ThreeStarsScore) Star3.SetActive(true);
     }
 }

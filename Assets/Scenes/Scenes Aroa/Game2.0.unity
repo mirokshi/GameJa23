@@ -2424,6 +2424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 4
+  _playerController: {fileID: 0}
 --- !u!114 &381669540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3035,6 +3036,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handInventory: {fileID: 1596448185}
+  playerInventory: {fileID: 0}
   items:
   - {fileID: 11400000, guid: a8f5b5dfe3dda474fb9a82532ae7e282, type: 2}
   - {fileID: 11400000, guid: 029b04438e9d471449ff8d26d803d7ec, type: 2}
@@ -5483,6 +5485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 4.1
+  _playerController: {fileID: 0}
 --- !u!1 &1136228495
 GameObject:
   m_ObjectHideFlags: 0
@@ -8421,6 +8424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 4
+  _playerController: {fileID: 0}
 --- !u!114 &1690541928
 MonoBehaviour:
   m_ObjectHideFlags: 0

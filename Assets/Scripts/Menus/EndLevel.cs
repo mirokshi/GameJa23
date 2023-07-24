@@ -6,12 +6,19 @@ using UnityEngine.SceneManagement;
 public class EndLevel : MonoBehaviour
 {
     public string escena;
+    private ItemGrid itemGrid;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             SceneManager.LoadScene(escena);
+            PlayerPrefs.SetInt("Score", CalculateScore());
         }
+    }
+
+    private int CalculateScore()
+    {
+        return itemGrid.CalculateTotalInventoryValue();
     }
 }

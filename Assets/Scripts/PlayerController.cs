@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         _capsuleCollider = GetComponent<CapsuleCollider2D>();
+        PlayerPrefs.SetInt("Score", 0);
     }
 
     public void DeathTrigger()
