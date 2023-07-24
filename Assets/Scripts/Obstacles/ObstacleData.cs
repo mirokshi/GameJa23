@@ -7,6 +7,7 @@ using UnityEngine.Serialization;
 public class ObstacleData : ScriptableObject
 {
     public new string name;
-    [FormerlySerializedAs("itemType")] public ObstacleType obstacleType;
+    public ObstacleType obstacleType;
+    public int weight;
     public Sprite sprite;
 }
