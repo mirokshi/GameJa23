@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2738841982478249468}
   - component: {fileID: 2738841982478249469}
   - component: {fileID: 3121127369460626511}
+  - component: {fileID: 7551634383998558541}
   m_Layer: 0
   m_Name: CuadroFake
   m_TagString: Untagged
@@ -153,6 +154,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e33e0166acc5194d994a4a54d7440e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectName:
-    serializedVersion: 2
-    m_Bits: 0
+--- !u!95 &7551634383998558541
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2738841982478249466}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3cfd992a8a78f6e47b02ad15a22d1c8c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
