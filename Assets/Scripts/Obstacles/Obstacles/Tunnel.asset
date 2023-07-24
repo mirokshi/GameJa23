@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Tunnel
   m_EditorClassIdentifier: 
   name: Tunnel
-  itemType: 2
+  obstacleType: 2
+  weight: 0
   sprite: {fileID: 0}
