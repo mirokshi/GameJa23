@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 168170276149168828}
   - component: {fileID: 168170276149168827}
   - component: {fileID: 168170276149168816}
-  - component: {fileID: 168170276149168831}
   - component: {fileID: 168170276149168817}
   m_Layer: 0
   m_Name: Enemy
@@ -141,23 +140,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerDetector: {fileID: 168170276756366996}
   radius: 3
---- !u!114 &168170276149168831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 168170276149168826}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdb1cce6d02ba7742b2d57ae09390f43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseSpeed: 0
-  _inventory: {fileID: 0}
-  currentWeight: 0
-  minusSpeed: 0.3
-  adjustedSpeed: 0
 --- !u!114 &168170276149168817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1b06fe398dc3354b904c97bbdd66930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 3
+  velocity: 4.2
 --- !u!1 &168170276756366995
 GameObject:
   m_ObjectHideFlags: 0
