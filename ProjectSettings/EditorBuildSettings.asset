@@ -27,7 +27,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/ShadowLevels/JunglaSH.unity
     guid: 7e548d3f5d9c25d46965f9403cbdacd9
   - enabled: 1
-    path: Assets/Scenes/Scenes Aroa/ShadowLev.unity
+    path: Assets/Scenes/GameScenes/ShadowLev.unity
     guid: aae0998f3ef7d4c43828f764de259ca8
   - enabled: 1
     path: Assets/Scenes/Levels/ShadowLevels/TutorialSH.unity
