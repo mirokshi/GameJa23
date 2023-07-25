@@ -39,7 +39,7 @@ public class UseItem : MonoBehaviour
          var obstacleAction = collider2D.gameObject.GetComponent<ObstacleAction>();
          var obstacleController = collider2D.gameObject.GetComponent<ObstacleController>();
          
-         if (HasItemInHand() || obstacleAction.GetItemType().Equals(ObstacleType.Weight))
+         if (HasItemInHand() && !obstacleAction.GetItemType().Equals(ObstacleType.Weight))
          {
             Debug.Log("Use item");
             
@@ -49,6 +49,14 @@ public class UseItem : MonoBehaviour
             obstacleController.OnDestroyObstacle(itemData, weight);
             
             _hand.OnDestroyItemInHand();
+         }
+         else if(obstacleAction.GetItemType().Equals(ObstacleType.Weight))
+         {
+            Debug.Log("Bridge");
+            var itemData = _hand.GetItemInHand();
+            var weight = _movementController.GetCurrentWeight();
+            
+            obstacleController.OnDestroyObstacle(itemData, weight);
          }
          else
          {

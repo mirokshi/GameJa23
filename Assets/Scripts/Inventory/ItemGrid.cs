@@ -24,7 +24,6 @@ public class ItemGrid : MonoBehaviour
     private int _totalWeight;
     private int _totalValue;
 
-
     [SerializeField] private int gridSizeWidth=7;
     [SerializeField] private int gridSizeHeight=4;
     [SerializeField] private ItemGridType itemGridType;

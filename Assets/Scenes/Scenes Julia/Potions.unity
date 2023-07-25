@@ -696,7 +696,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 707229879}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -73.43, y: 4.58, z: 0}
+  m_LocalPosition: {x: 11.02, y: 4.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -730,15 +730,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handInventory: {fileID: 1526031125}
   playerInventory: {fileID: 2089677631}
-  items:
-  - {fileID: 11400000, guid: 9bea542e23578164993739d895c10499, type: 2}
-  - {fileID: 11400000, guid: 6cd47813a4fc0a5438ba82186d864e61, type: 2}
-  - {fileID: 11400000, guid: 180d3f1f49b509d4e9a2f65a692bd9b7, type: 2}
-  - {fileID: 11400000, guid: e1e89d96a8d69f849bb549ec911dea2d, type: 2}
-  - {fileID: 11400000, guid: f62722666ed541447a280cb38c2c1171, type: 2}
-  - {fileID: 11400000, guid: b01ad530a1ecf2941bed15da76380046, type: 2}
   itemPrefab: {fileID: 8128289522782051307, guid: 7f79f713025025144b4158a927960364, type: 3}
-  canvasTransform: {fileID: 2031078356}
 --- !u!114 &707229889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1031,11 +1023,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2738841982478249470, guid: 42d0115ecdde68847acb17445cd69516, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -60.23
+      value: 12.78
       objectReference: {fileID: 0}
     - target: {fileID: 2738841982478249470, guid: 42d0115ecdde68847acb17445cd69516, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.71
+      value: 3.81
       objectReference: {fileID: 0}
     - target: {fileID: 2738841982478249470, guid: 42d0115ecdde68847acb17445cd69516, type: 3}
       propertyPath: m_LocalPosition.z

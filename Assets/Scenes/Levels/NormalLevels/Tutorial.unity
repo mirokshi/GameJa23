@@ -311,7 +311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 168170276149168830, guid: 65e815507c2e8074d96e8b5d6fc8cf0f, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 168170276149168830, guid: 65e815507c2e8074d96e8b5d6fc8cf0f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -446,7 +446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5242462367631702796, guid: d91ca491905f3024cb1f4361f66839b7, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5242462367631702796, guid: d91ca491905f3024cb1f4361f66839b7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -926,7 +926,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: If you carry too much weight on you, the bridge will fall.
+  m_text: If you carry too much weight on you, the bridge will break.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1602,7 +1602,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "You will be able to move items to the main invetory draggin them. \n"
+  m_text: "You will be able to move items to the main inventory, dragging them. \n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2736,25 +2736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handInventory: {fileID: 1596448185}
   playerInventory: {fileID: 1841413382}
-  items:
-  - {fileID: 11400000, guid: a8f5b5dfe3dda474fb9a82532ae7e282, type: 2}
-  - {fileID: 11400000, guid: 029b04438e9d471449ff8d26d803d7ec, type: 2}
-  - {fileID: 11400000, guid: 4faf67aaaa4470d4e97d451704ac9e95, type: 2}
-  - {fileID: 11400000, guid: 2a7c7134193339a44aaee4e824d11991, type: 2}
-  - {fileID: 11400000, guid: c7cf69efde7a17b45b0efe4cf7471db1, type: 2}
-  - {fileID: 11400000, guid: 9bea542e23578164993739d895c10499, type: 2}
-  - {fileID: 11400000, guid: 6cd47813a4fc0a5438ba82186d864e61, type: 2}
-  - {fileID: 11400000, guid: a2c8718d9f8d23942a375d9933bb72b5, type: 2}
-  - {fileID: 11400000, guid: 75efb0e6c2cd8d44bb2cf9e958d0bcdb, type: 2}
-  - {fileID: 11400000, guid: dc03623ea9d54c749a54e249712c2b5c, type: 2}
-  - {fileID: 11400000, guid: 180d3f1f49b509d4e9a2f65a692bd9b7, type: 2}
-  - {fileID: 11400000, guid: e1e89d96a8d69f849bb549ec911dea2d, type: 2}
-  - {fileID: 11400000, guid: b5f3138335bbab242b539414b1dd777e, type: 2}
-  - {fileID: 11400000, guid: bf677b63e54d4a64e8ce7161449ac56f, type: 2}
-  - {fileID: 11400000, guid: f62722666ed541447a280cb38c2c1171, type: 2}
-  - {fileID: 11400000, guid: b01ad530a1ecf2941bed15da76380046, type: 2}
   itemPrefab: {fileID: 8128289522782051307, guid: 7f79f713025025144b4158a927960364, type: 3}
-  canvasTransform: {fileID: 427945548}
 --- !u!1 &636793690
 GameObject:
   m_ObjectHideFlags: 0
@@ -2873,7 +2855,7 @@ PrefabInstance:
       objectReference: {fileID: 1841413382}
     - target: {fileID: 7681878590867067996, guid: f397da6af652d7741a2d3bcb30844e11, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7681878590867067996, guid: f397da6af652d7741a2d3bcb30844e11, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3255,7 +3237,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2738841982478249470, guid: 43bed0962a2a3d44b98f42f4e2a9972a, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2738841982478249470, guid: 43bed0962a2a3d44b98f42f4e2a9972a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5617,7 +5599,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5242462367631702796, guid: f5229c2e5b18c124286a23c81472d56f, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5242462367631702796, guid: f5229c2e5b18c124286a23c81472d56f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6371,7 +6353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2738841982478249470, guid: 9e31a116d7fb3c54c8e527ba8fb9381c, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2738841982478249470, guid: 9e31a116d7fb3c54c8e527ba8fb9381c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6563,7 +6545,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2738841982478249470, guid: 9e31a116d7fb3c54c8e527ba8fb9381c, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2738841982478249470, guid: 9e31a116d7fb3c54c8e527ba8fb9381c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6735,6 +6717,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1708968601563129557, guid: d711d5a18ab477749bd2760902330eaa, type: 3}
+      propertyPath: itemGrid
+      value: 
+      objectReference: {fileID: 1841413382}
     - target: {fileID: 1708968601563129558, guid: d711d5a18ab477749bd2760902330eaa, type: 3}
       propertyPath: m_Name
       value: End
@@ -7183,7 +7169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2738841982478249470, guid: 9de2706ed10be794ca10aafa8f299b29, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2738841982478249470, guid: 9de2706ed10be794ca10aafa8f299b29, type: 3}
       propertyPath: m_LocalPosition.x
