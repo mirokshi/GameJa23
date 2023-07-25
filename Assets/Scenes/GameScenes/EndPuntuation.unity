@@ -2414,11 +2414,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23ed1aaa84a3e654ab05ebef245d3101, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OneStarScore: 100
+  OneStarScore: 50
   Star1: {fileID: 946806795}
-  TwoStarsScore: 175
+  TwoStarsScore: 100
   Star2: {fileID: 1241311546}
-  ThreeStarsScore: 250
+  ThreeStarsScore: 175
   Star3: {fileID: 359554675}
 --- !u!114 &2073683921
 MonoBehaviour:
