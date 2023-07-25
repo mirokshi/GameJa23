@@ -16,7 +16,10 @@ public class Load_level : MonoBehaviour
 
     private void Start()
     {
-        text.text = message.ToString();
+        if (text is not null)
+        {
+            text.text = message.ToString();    
+        }
     }
 
     public void loadLevel()
