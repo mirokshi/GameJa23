@@ -87,16 +87,6 @@ public class ItemGrid : MonoBehaviour
             OnThrowItem?.Invoke(inventoryItem);
         }
 
-        ItemType itemType = inventoryItem._itemData.itemType;
-        
-        if (itemGridType == ItemGridType.Hand && (itemType.Equals(ItemType.Potion)))
-        {
-            Debug.Log("Potion Activated");
-            OnUsePotion?.Invoke(inventoryItem._itemData);
-            _isItemInInventory = false;
-            inventoryItem.OnDestroy();
-        }
-
         return true;
     }
 
@@ -105,6 +95,16 @@ public class ItemGrid : MonoBehaviour
         if (itemGridType == ItemGridType.Hand)
         {
             _isItemInInventory = true;
+            
+            ItemType itemType = inventoryItem._itemData.itemType;
+        
+            if (itemType.Equals(ItemType.Potion))
+            {
+                Debug.Log("Potion Activated");
+                OnUsePotion?.Invoke(inventoryItem._itemData);
+                _isItemInInventory = false;
+                inventoryItem.OnDestroy();
+            }
         }
 
         _totalWeight += inventoryItem._itemData.weight;
