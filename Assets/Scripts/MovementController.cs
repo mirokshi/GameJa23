@@ -11,12 +11,14 @@ public class MovementController : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private PlayerController _playerController;
     
-    [SerializeField] private ItemGrid _inventory;
-
-    public float currentWeight = 0f;
-    public float minusSpeed = 0.3f;
-    public float adjustedSpeed = 0f;
+    [SerializeField] private ItemGrid inventory;
     
+    public float speedMultiplier = 0.3f;
+    public float minSpeed = 2;
+    public float adjustedSpeed = 0f;
+    public float weightToCut = 20f;
+    
+    private float _currentWeight = 0f;
     private bool _potionEffect;
 
     void Start()
@@ -27,11 +29,11 @@ public class MovementController : MonoBehaviour
 
     void Update()
     {
-        var minSpeed = baseSpeed - 2;
-        currentWeight = _inventory.GetTotalWeight();
+        _currentWeight = inventory.GetTotalWeight();
+        
         if (!_potionEffect)
         {
-            adjustedSpeed = baseSpeed - minusSpeed * (int) (currentWeight / 20);
+            adjustedSpeed = baseSpeed - speedMultiplier * (int) (_currentWeight / weightToCut);
         }
 
         if (!_playerController._isDead)
@@ -55,8 +57,8 @@ public class MovementController : MonoBehaviour
 
     public float GetCurrentWeight()
     {
-        Debug.Log("Weight: " + currentWeight);
-        return currentWeight;
+        Debug.Log("Weight: " + _currentWeight);
+        return _currentWeight;
     }
     
     private void OnUsePotion(ItemData itemData)
