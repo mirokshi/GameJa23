@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DontDestroy : MonoBehaviour
 {
@@ -25,7 +26,10 @@ public class DontDestroy : MonoBehaviour
 
     public void Update()
     {
-        
+        if (SceneManager.GetActiveScene().name.Equals("MsinMenu"))
+        {
+            AudioSources[0].Play();
+        }
     }
 
     public void changeVolume(float volume)
