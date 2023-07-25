@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacleType: 5
   itemType: 8
-  name: 
+  name: Fossil
   width: 2
   height: 1
-  peso: 11
-  valor: 14
+  weight: 11
+  value: 14
   itemIcon: {fileID: 21300000, guid: 96c090e4e0ca2c34986bb81a9804a893, type: 3}

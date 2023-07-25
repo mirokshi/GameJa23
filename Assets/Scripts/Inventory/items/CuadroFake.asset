@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacleType: 5
   itemType: 8
-  name: 
+  name: PaintingFake
   width: 2
   height: 2
-  peso: 20
-  valor: 2
+  weight: 20
+  value: 2
   itemIcon: {fileID: 21300000, guid: 9bc229105f15d11418455ef85aabded3, type: 3}

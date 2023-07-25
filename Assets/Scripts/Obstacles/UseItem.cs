@@ -8,9 +8,14 @@ using UnityEngine;
 public class UseItem : MonoBehaviour
 {
    [SerializeField] private ItemGrid _hand;
+   private MovementController _movementController;
 
    public static Action OnDeath;
-   public static Action<ItemData> OnDestroyObstacle;
+
+   private void Start()
+   {
+      _movementController = GetComponent<MovementController>();
+   }
 
    private bool HasItemInHand()
    {
@@ -24,19 +29,34 @@ public class UseItem : MonoBehaviour
 
    private void DeathTrigger()
    {
-      Debug.Log("You are Dead");
+      OnDeath?.Invoke();
    }
 
-   private void OnTriggerEnter2D(Collider2D collider)
+   private void OnTriggerEnter2D(Collider2D collider2D)
    {
-      if (collider.CompareTag("Obstacle"))
+      if (collider2D.CompareTag("Obstacle"))
       {
-         if (HasItemInHand())
+         var obstacleAction = collider2D.gameObject.GetComponent<ObstacleAction>();
+         var obstacleController = collider2D.gameObject.GetComponent<ObstacleController>();
+         
+         if (HasItemInHand() && !obstacleAction.GetItemType().Equals(ObstacleType.Weight))
          {
+            Debug.Log("Use item");
+            
             var itemData = _hand.GetItemInHand();
-            Debug.Log("Usar Objeto");
-            collider.gameObject.GetComponent<ObstacleController>().OnDestroyObstacle(itemData);
+            
+            var weight = _movementController.GetCurrentWeight();
+            obstacleController.OnDestroyObstacle(itemData, weight);
+            
             _hand.OnDestroyItemInHand();
+         }
+         else if(obstacleAction.GetItemType().Equals(ObstacleType.Weight))
+         {
+            Debug.Log("Bridge");
+            var itemData = _hand.GetItemInHand();
+            var weight = _movementController.GetCurrentWeight();
+            
+            obstacleController.OnDestroyObstacle(itemData, weight);
          }
          else
          {

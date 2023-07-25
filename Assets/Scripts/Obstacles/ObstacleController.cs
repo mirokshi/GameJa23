@@ -15,9 +15,9 @@ public class ObstacleController : MonoBehaviour
         _obstacleAction = GetComponent<ObstacleAction>();
     }
 
-    public void OnDestroyObstacle(ItemData itemData)
+    public void OnDestroyObstacle(ItemData itemData, float weight)
     {
-        if (!IsAvoided(itemData))
+        if (!_obstacleAction.GetItemType().Equals(ObstacleType.Weight) && !IsAvoided(itemData))
         {
             DeathTrigger();
         }
@@ -25,7 +25,8 @@ public class ObstacleController : MonoBehaviour
         else
         {
             Debug.Log("Player avoids the Obstacle");
-            _obstacleAction.DoAction(itemData);
+            Destroy(gameObject.GetComponent<BoxCollider2D>());
+            _obstacleAction.DoAction(itemData, weight);
         }
     }
 

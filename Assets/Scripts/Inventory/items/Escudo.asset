@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacleType: 4
   itemType: 3
-  name: 
+  name: Shield
   width: 2
   height: 2
-  peso: 12
-  valor: 6
+  weight: 12
+  value: 6
   itemIcon: {fileID: 21300000, guid: 851b732120e939d4683c0b12e1d52aeb, type: 3}

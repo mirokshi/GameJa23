@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Inventory;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 using UnityEngine.Serialization;
@@ -20,13 +21,19 @@ public class ItemGrid : MonoBehaviour
     private InventoryItem[,] InventoryItemSlot;
 
     private bool _isItemInInventory;
-    
+    private int _totalWeight;
+    private int _totalValue;
+
     [SerializeField] private int gridSizeWidth=7;
     [SerializeField] private int gridSizeHeight=4;
     [SerializeField] private ItemGridType itemGridType;
-    
-    private void Start()
+
+    public static Action<ItemData> OnUsePotion;
+
+    private void Awake()
     {
+        _totalWeight = 0;
+        _totalValue = 0;
         _rectTransform = GetComponent<RectTransform>();
         Init(gridSizeWidth,gridSizeHeight);
     }
@@ -87,7 +94,20 @@ public class ItemGrid : MonoBehaviour
         if (itemGridType == ItemGridType.Hand)
         {
             _isItemInInventory = true;
+            
+            ItemType itemType = inventoryItem._itemData.itemType;
+        
+            if (itemType.Equals(ItemType.Potion))
+            {
+                Debug.Log("Potion Activated");
+                OnUsePotion?.Invoke(inventoryItem._itemData);
+                _isItemInInventory = false;
+                inventoryItem.OnDestroy();
+            }
         }
+
+        _totalWeight += inventoryItem._itemData.weight;
+        _totalValue += inventoryItem._itemData.value;
         
         RectTransform rectTransform = inventoryItem.GetComponent<RectTransform>();
         rectTransform.SetParent(_rectTransform);
@@ -128,6 +148,9 @@ public class ItemGrid : MonoBehaviour
         {
             _isItemInInventory = false;
         }
+        
+        _totalWeight -= toReturn._itemData.weight;
+        _totalValue -= toReturn._itemData.value;
 
         ClearGridReference(toReturn);
 
@@ -243,8 +266,10 @@ public class ItemGrid : MonoBehaviour
     public bool IsItemInInventory()
     {
         if (itemGridType == ItemGridType.Hand)
+        {
             return _isItemInInventory;
-        
+        }
+
         return false;
     }
 
@@ -279,26 +304,19 @@ public class ItemGrid : MonoBehaviour
         }
     }
 
-    public int CalculateTotalInventoryValue()
+    public int GetTotalWeight()
     {
-        int totalValue = 0;
-        List<InventoryItem> items = new List<InventoryItem>();
-
-        for (int x = 0; x < gridSizeWidth; x++)
+        if (_totalWeight == 0)
         {
-            for (int y = 0; y < gridSizeHeight; y++)
-            {
-                InventoryItem item = InventoryItemSlot[x, y];
-                
-                if (item != null && !items.Contains(item))
-                {
-                    items.Add(item);
-                    totalValue += item._itemData.valor; // Add the item's variableValue to the totalValue
-                }
-            }
+            return 1;
         }
+        
+        return _totalWeight;
+    }
 
-        return totalValue;
+    public int GetTotalValue()
+    {
+        return _totalValue;
     }
     
 }

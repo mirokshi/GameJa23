@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Rock
   m_EditorClassIdentifier: 
   name: Rock
-  itemType: 3
+  obstacleType: 3
+  weight: 0
   sprite: {fileID: 0}

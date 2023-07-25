@@ -17,6 +17,6 @@ MonoBehaviour:
   name: Painting
   width: 2
   height: 2
-  peso: 20
-  valor: 17
+  weight: 20
+  value: 17
   itemIcon: {fileID: 21300000, guid: 9bc229105f15d11418455ef85aabded3, type: 3}

@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacleType: 5
   itemType: 8
-  name: 
+  name: ChestFake
   width: 3
   height: 3
-  peso: 30
-  valor: 1
+  weight: 30
+  value: 1
   itemIcon: {fileID: 21300000, guid: f53a7575d52a55d49abab4065d8c4b55, type: 3}

@@ -25,47 +25,22 @@ public class InventoryController : MonoBehaviour
     private InventoryItem _selectedItem;
     private InventoryItem _overlapItem;
     private RectTransform _rectTransform;
-
-    [SerializeField] private List<ItemData> items;
+    
     [SerializeField] private GameObject itemPrefab;
-    [SerializeField] private Transform canvasTransform;
 
     private InventoryHighlight _inventoryHighlight;
     private InventoryItem _itemToHighlight;
     private Vector2 _oldPosition;
 
-    private int _totalWeight
-    {
-        get => _totalWeight;
-        set
-        {
-            
-        }
-    }
-
     private void Awake()
     {
         _inventoryHighlight = GetComponent<InventoryHighlight>();
-        _totalWeight = 0;
     }
 
     private void Update()
     {
         ItemIconDrag();
 
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            if (_selectedItem==null)
-            {
-                CreateRandomItem();    
-            }
-        }
-
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            InsertRandomItem();
-        }
-        
         if (Input.GetKeyDown(KeyCode.R))
         {
             RotateItem();
@@ -83,6 +58,8 @@ public class InventoryController : MonoBehaviour
         {
             LeftMouseButtonPress();
         }
+        
+        Debug.Log("Inventory Weight: " + playerInventory.GetTotalWeight());
     }
 
     private void RotateItem()
@@ -90,25 +67,6 @@ public class InventoryController : MonoBehaviour
         if (_selectedItem==null){return;}
 
         _selectedItem.Rotate();
-    }
-
-    private void InsertRandomItem()
-    {
-        if(selectedItemGrid ==  null) {return;}
-        
-        CreateRandomItem();
-        InventoryItem itemToInsert = _selectedItem;
-        _selectedItem = null;
-        InsertItem(itemToInsert);
-    }
-
-    private void InsertItem(InventoryItem itemToInsert)
-    {
-        Vector2Int? posOnGrid = selectedItemGrid.FindSpaceForObject(itemToInsert);
-        
-        if (posOnGrid ==  null) {return;}
-        
-        selectedItemGrid.PlaceItem(itemToInsert, posOnGrid.Value.x, posOnGrid.Value.y);
     }
 
     private void HandleHighlight()
@@ -138,19 +96,6 @@ public class InventoryController : MonoBehaviour
             _inventoryHighlight.SetSize(_selectedItem);
             _inventoryHighlight.SetPosition(selectedItemGrid,_selectedItem,positionOnGrid.x,positionOnGrid.y);   
         }
-    }
-    
-
-    private void CreateRandomItem()
-    {
-        InventoryItem inventoryItem = Instantiate(itemPrefab).GetComponent<InventoryItem>();
-        _selectedItem = inventoryItem;
-        _rectTransform = inventoryItem.GetComponent<RectTransform>();
-        _rectTransform.SetParent(canvasTransform);
-        _rectTransform.SetAsLastSibling();
-
-        int selectedItemID = UnityEngine.Random.Range(0, items.Count);
-        inventoryItem.Set(items[selectedItemID]);
     }
 
     private void PickUpItem(InventoryItem item)

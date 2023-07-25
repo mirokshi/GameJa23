@@ -12,7 +12,7 @@ public abstract class ObstacleAction : MonoBehaviour
         return obstacleData.obstacleType;
     }
 
-    public abstract void DoAction(ItemData itemData);
+    public abstract void DoAction(ItemData itemData, float weight);
     
     
 }

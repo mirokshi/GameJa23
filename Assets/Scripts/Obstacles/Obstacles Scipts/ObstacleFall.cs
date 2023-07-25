@@ -10,7 +10,7 @@ public class ObstacleFall : ObstacleAction
     [SerializeField] private GameObject board;
     [SerializeField] private GameObject launchPad;
 
-    public override void DoAction(ItemData itemData)
+    public override void DoAction(ItemData itemData, float weight)
     {
         Debug.Log("Success! (Fall)");
         if (itemData.itemType == ItemType.Board)

@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacleType: 5
   itemType: 8
-  name: 
+  name: UrnFake
   width: 2
   height: 2
-  peso: 8
-  valor: 3
+  weight: 8
+  value: 3
   itemIcon: {fileID: 21300000, guid: 0aba261c551ee944ebdfec3b51a89a24, type: 3}
