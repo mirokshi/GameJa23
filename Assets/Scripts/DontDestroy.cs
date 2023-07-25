@@ -7,6 +7,7 @@ using UnityEngine;
 public class DontDestroy : MonoBehaviour
 {
     public static DontDestroy Instance;
+    public AudioSource[] AudioSources;
 
     private void Awake()
     {
@@ -19,6 +20,11 @@ public class DontDestroy : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        
+    }
+
+    public void Update()
+    {
         
     }
 
