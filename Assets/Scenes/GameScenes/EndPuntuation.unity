@@ -333,7 +333,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Well DOne!
+  m_text: Well Done!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a1c46bdb868ee949944c1b82d26062b, type: 2}
   m_sharedMaterial: {fileID: -223331016765004305, guid: 6a1c46bdb868ee949944c1b82d26062b, type: 2}
@@ -1789,7 +1789,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 1633, y: 124}
-  m_SizeDelta: {x: 297.996, y: 87.119}
+  m_SizeDelta: {x: 110, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1400673458
 Animator:
@@ -2011,7 +2011,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cad7c5310af24f24cad70f62525867af, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 569157b786e22af4c932f502ff807bc9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
