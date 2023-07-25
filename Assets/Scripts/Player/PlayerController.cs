@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     private CapsuleCollider2D _capsuleCollider;
     public bool _isDead = false;
+    [SerializeField] private GameObject deadUi;
 
     void Start()
     {
@@ -18,6 +19,8 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("Player is dead");
         _isDead = true;
+        //Time.timeScale = 0f;
+        deadUi.SetActive(true);
     }
 
     private void OnEnable()
