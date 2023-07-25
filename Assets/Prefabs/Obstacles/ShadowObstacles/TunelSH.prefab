@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 1868147007896975163}
   - component: {fileID: 493721085883762042}
   - component: {fileID: 5243400523236748146}
-  - component: {fileID: 801581850}
-  - component: {fileID: 801581849}
+  - component: {fileID: 3030671556598794472}
+  - component: {fileID: 2989623846652760291}
   m_Layer: 0
-  m_Name: Piedra
+  m_Name: TunelSH
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,8 +30,8 @@ Transform:
   m_GameObject: {fileID: 1435872253890291077}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.5383545, y: -0.094230205, z: -1.270585}
-  m_LocalScale: {x: 0.19999999, y: 0.39999998, z: 0.088434905}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 9.474106, y: 9.112525, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7614583e0eddb5c41a10e37d0329eb00, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0779ad3feec52124e97114bcbb12ef13, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -122,20 +122,20 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.3008051, y: 0.2205596}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9.6, y: 7.64}
+    oldSize: {x: 0.32, y: 0.32}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.465394, y: 7.4581127}
+  m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
---- !u!114 &801581850
+--- !u!114 &3030671556598794472
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c243035b0e082804c94c6673cc9761fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &801581849
+--- !u!114 &2989623846652760291
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1435872253890291077}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4eb18ea4312d7a4298cd02a305ee090, type: 3}
+  m_Script: {fileID: 11500000, guid: 3252e5cd73ebeca49967fbf45eeb5532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacleData: {fileID: 11400000, guid: d4c1fa11d0d7f0e4db5828e9e3e028dd, type: 2}
+  obstacleData: {fileID: 11400000, guid: 4467d794311254441a09151503a992ac, type: 2}

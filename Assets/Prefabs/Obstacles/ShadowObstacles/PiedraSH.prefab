@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 801581850}
   - component: {fileID: 801581849}
   m_Layer: 0
-  m_Name: Piedra
+  m_Name: PiedraSH
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7614583e0eddb5c41a10e37d0329eb00, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0779ad3feec52124e97114bcbb12ef13, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -126,7 +126,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9.6, y: 7.64}
+    oldSize: {x: 0.32, y: 0.32}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -159,4 +159,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4eb18ea4312d7a4298cd02a305ee090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacleData: {fileID: 11400000, guid: d4c1fa11d0d7f0e4db5828e9e3e028dd, type: 2}
+  obstacleData: {fileID: 11400000, guid: 28ab86b2e6aef524a87b4a00f89ae827, type: 2}
