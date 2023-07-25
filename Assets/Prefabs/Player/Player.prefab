@@ -4964,11 +4964,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdb1cce6d02ba7742b2d57ae09390f43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSpeed: 4
-  _inventory: {fileID: 0}
-  currentWeight: 0
-  minusSpeed: 0.3
+  baseSpeed: 5
+  inventory: {fileID: 0}
+  speedMultiplier: 0.3
+  minSpeed: 3
   adjustedSpeed: 0
+  weightToCut: 30
 --- !u!114 &7681878590867067997
 MonoBehaviour:
   m_ObjectHideFlags: 0

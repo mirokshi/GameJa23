@@ -581,10 +581,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseSpeed: 4
-  _inventory: {fileID: 2089677631}
-  currentWeight: 0
-  minusSpeed: 0.2
+  inventory: {fileID: 2089677631}
+  speedMultiplier: 0.3
+  minSpeed: 2
   adjustedSpeed: 0
+  weightToCut: 20
 --- !u!114 &707229881
 MonoBehaviour:
   m_ObjectHideFlags: 0
