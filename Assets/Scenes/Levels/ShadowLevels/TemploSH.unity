@@ -2855,7 +2855,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7921846395305450375, guid: a3f2d1a9fe7f65c488523e6ad448e601, type: 3}
       propertyPath: level
-      value: Templo
+      value: TemploSH
       objectReference: {fileID: 0}
     - target: {fileID: 7921846395305450375, guid: a3f2d1a9fe7f65c488523e6ad448e601, type: 3}
       propertyPath: Animator
@@ -4826,7 +4826,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 682667672}
   - {fileID: 1776662266}
   - {fileID: 1205423858}
   - {fileID: 15560200}
@@ -4841,6 +4840,7 @@ Transform:
   - {fileID: 1887431321}
   - {fileID: 1179542590}
   - {fileID: 1872487079}
+  - {fileID: 682667672}
   - {fileID: 2007732783}
   - {fileID: 1363999102}
   - {fileID: 687869856}
@@ -6287,41 +6287,41 @@ Transform:
   - {fileID: 691968195}
   - {fileID: 1952827080}
   - {fileID: 499541019}
+  - {fileID: 580870599}
   - {fileID: 1288037671}
   - {fileID: 1483779808}
   - {fileID: 2089134847}
+  - {fileID: 772287231}
   - {fileID: 259344505}
   - {fileID: 1755137764}
+  - {fileID: 1487410241}
   - {fileID: 1570394820}
+  - {fileID: 837497200}
   - {fileID: 55557450}
   - {fileID: 988527765}
+  - {fileID: 186089340}
+  - {fileID: 1935450974}
   - {fileID: 552586392}
   - {fileID: 386257676}
   - {fileID: 42920441}
-  - {fileID: 772287231}
+  - {fileID: 146674109}
   - {fileID: 1993875645}
+  - {fileID: 1622549645}
+  - {fileID: 2135991217}
+  - {fileID: 1553536788}
+  - {fileID: 1284741818}
   - {fileID: 1963664444}
   - {fileID: 489206790}
   - {fileID: 1816099269}
-  - {fileID: 1553536788}
-  - {fileID: 47005892}
-  - {fileID: 1549121137}
-  - {fileID: 1850465192}
-  - {fileID: 186089340}
-  - {fileID: 1935450974}
-  - {fileID: 580870599}
-  - {fileID: 1487410241}
-  - {fileID: 146674109}
-  - {fileID: 1622549645}
-  - {fileID: 2135991217}
-  - {fileID: 1284741818}
-  - {fileID: 837497200}
   - {fileID: 959764920}
   - {fileID: 666011724}
   - {fileID: 1677930692}
+  - {fileID: 47005892}
+  - {fileID: 1549121137}
   - {fileID: 546642007}
   - {fileID: 766928344}
   - {fileID: 1187030623}
+  - {fileID: 1850465192}
   - {fileID: 250311915}
   - {fileID: 598345326}
   m_Father: {fileID: 0}
