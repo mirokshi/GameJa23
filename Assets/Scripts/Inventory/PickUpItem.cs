@@ -18,7 +18,6 @@ public class PickUpItem : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            Debug.Log("Pick Up Item");
             OnPickUpItem?.Invoke(_inventoryItem);
             Destroy(gameObject);
         }

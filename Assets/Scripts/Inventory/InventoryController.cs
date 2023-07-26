@@ -10,11 +10,9 @@ public class InventoryController : MonoBehaviour
     private ItemGrid selectedItemGrid;
 
     [SerializeField] private ItemGrid handInventory;
-    [SerializeField] private ItemGrid playerInventory;
     
     public ItemGrid SelectedItemGrid
     {
-        get => selectedItemGrid;
         set
         {
             selectedItemGrid = value;
@@ -58,8 +56,6 @@ public class InventoryController : MonoBehaviour
         {
             LeftMouseButtonPress();
         }
-        
-        Debug.Log("Inventory Weight: " + playerInventory.GetTotalWeight());
     }
 
     private void RotateItem()
