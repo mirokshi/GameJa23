@@ -43,7 +43,7 @@ public class DontDestroy : MonoBehaviour
         
         if (!_currentScene.Equals(nextScene))
         {
-            if (_currentSong != 0)
+            if (_currentSong != 0 && !nextScene.name.Equals("EndPuntuation"))
             {
                 Stop();
             }
@@ -57,62 +57,53 @@ public class DontDestroy : MonoBehaviour
             (!_currentScene.Equals(nextScene) && nextScene.name.Equals("Credits")) ||
             (!_currentScene.Equals(nextScene) && nextScene.name.Equals("Level-Selector")) ||
             (!_currentScene.Equals(nextScene) && nextScene.name.Equals("Options")) ||
-            (!_currentScene.Equals(nextScene) && nextScene.name.Equals("ShadowLev")) ||
-            (!_currentScene.Equals(nextScene) && nextScene.name.Equals("EndPuntuation")))
+            (!_currentScene.Equals(nextScene) && nextScene.name.Equals("ShadowLev")))
         {
             Debug.Log("Menu");
-            _AudioSources[0].UnPause();
-            _currentScene = SceneManager.GetActiveScene();
-            _currentSong = 0;
+            SetMusic(0);
         }
 
         if (!_currentScene.Equals(nextScene) && nextScene.name.Equals("Tutorial")){
             Debug.Log("Tutorial");
-            _AudioSources[1].Play();
-            _currentScene = SceneManager.GetActiveScene();
-            _currentSong = 1;
+            SetMusic(1);
         }
         
         if (!_currentScene.Equals(nextScene) && nextScene.name.Equals("Jungla")){
             Debug.Log("Jungla");
-            _AudioSources[2].Play();
-            _currentScene = SceneManager.GetActiveScene();
-            _currentSong = 2;
+            SetMusic(2);
         }
         
         if (!_currentScene.Equals(nextScene) && nextScene.name.Equals("Desierto")){
             Debug.Log("Desierto");
-            _AudioSources[3].Play();
-            _currentScene = SceneManager.GetActiveScene();
-            _currentSong = 3;
+            SetMusic(3);
         }
         
         if (!_currentScene.Equals(nextScene) && nextScene.name.Equals("Moon")){
             Debug.Log("Moon");
-            _AudioSources[4].Play();
-            _currentScene = SceneManager.GetActiveScene();
-            _currentSong = 4;
+            SetMusic(4);
         }
         
         if (!_currentScene.Equals(nextScene) && nextScene.name.Equals("City")){
             Debug.Log("City");
-            _AudioSources[5].Play();
-            _currentScene = SceneManager.GetActiveScene();
-            _currentSong = 5;
+            SetMusic(5);
         }
         
-        if (!_currentScene.Equals(nextScene) && nextScene.name.Equals("City")){
-            Debug.Log("City");
-            _AudioSources[6].Play();
-            _currentScene = SceneManager.GetActiveScene();
-            _currentSong = 6;
+        if (!_currentScene.Equals(nextScene) && nextScene.name.Equals("Templo")){
+            Debug.Log("Templo");
+            SetMusic(6);
         }
-        
     }
 
     public void changeVolume(float volume)
     {
         AudioListener.volume = volume;
+    }
+
+    private void SetMusic(int index)
+    {
+        _AudioSources[index].Play();
+        _currentScene = SceneManager.GetActiveScene();
+        _currentSong = index;
     }
     
     private void Stop()
@@ -123,20 +114,5 @@ public class DontDestroy : MonoBehaviour
     private void Pause()
     {
         _AudioSources[0].Pause();
-    }
-
-    private bool EndPunctuationCheck()
-    {
-        string[] sceneNames = new []{"MainMenu","Credits","Level-Selector","Options","ShadowLev"};
-
-        foreach (var scene in sceneNames)
-        {
-            if (_currentScene.name.Equals(scene))
-            {
-                return true;
-            }
-        }
-
-        return false;
     }
 }
