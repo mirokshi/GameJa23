@@ -6,9 +6,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
-public class DontDestroy : MonoBehaviour
+public class MusicManager : MonoBehaviour
 {
-    public static DontDestroy Instance;
+    public static MusicManager Instance;
     public AudioSource[] _AudioSources;
     private Scene _currentScene;
     private int _currentSong;
@@ -70,12 +70,12 @@ public class DontDestroy : MonoBehaviour
         
         if (!_currentScene.Equals(nextScene) && nextScene.name.Equals("Jungla")){
             Debug.Log("Jungla");
-            SetMusic(2);
+            SetMusic(5);
         }
         
         if (!_currentScene.Equals(nextScene) && nextScene.name.Equals("Desierto")){
             Debug.Log("Desierto");
-            SetMusic(3);
+            SetMusic(2);
         }
         
         if (!_currentScene.Equals(nextScene) && nextScene.name.Equals("Moon")){
@@ -85,7 +85,7 @@ public class DontDestroy : MonoBehaviour
         
         if (!_currentScene.Equals(nextScene) && nextScene.name.Equals("City")){
             Debug.Log("City");
-            SetMusic(5);
+            SetMusic(3);
         }
         
         if (!_currentScene.Equals(nextScene) && nextScene.name.Equals("Templo")){
