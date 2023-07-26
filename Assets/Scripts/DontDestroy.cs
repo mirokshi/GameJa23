@@ -4,12 +4,14 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class DontDestroy : MonoBehaviour
 {
     public static DontDestroy Instance;
     public AudioSource[] _AudioSources;
-    public Scene activeScene;
+    private Scene _currentScene;
+    private int _currentSong;
 
     private void Awake()
     {
@@ -23,74 +25,87 @@ public class DontDestroy : MonoBehaviour
             Destroy(gameObject);
         }
 
+        _currentSong = 0;
     }
 
-    private void Stop(int audioOrigen)
+    private void Start()
     {
-        for (int i = _AudioSources.Length - 1; i >= 0; i--)
+        _currentScene = SceneManager.GetActiveScene();
+        if(_currentScene.name.Equals("MainMenu"))
         {
-            if (i != audioOrigen)
-            {
-                _AudioSources[i].Stop();
-            }
+            _AudioSources[0].Play();
         }
     }
 
     public void Update()
     {
-        if ((!activeScene.Equals(SceneManager.GetActiveScene()) && SceneManager.GetActiveScene().name.Equals("MainMenu")) &&
-            (!activeScene.Equals(SceneManager.GetActiveScene()) && SceneManager.GetActiveScene().name.Equals("Credits")) &&
-            (!activeScene.Equals(SceneManager.GetActiveScene()) && SceneManager.GetActiveScene().name.Equals("EndPuntuation")) &&
-            (!activeScene.Equals(SceneManager.GetActiveScene()) && SceneManager.GetActiveScene().name.Equals("Level-Selector")) &&
-            (!activeScene.Equals(SceneManager.GetActiveScene()) && SceneManager.GetActiveScene().name.Equals("Options")) &&
-            (!activeScene.Equals(SceneManager.GetActiveScene()) && SceneManager.GetActiveScene().name.Equals("ShadowLev")))
+        var nextScene = SceneManager.GetActiveScene();
+        
+        if (!_currentScene.Equals(nextScene))
+        {
+            if (_currentSong != 0)
+            {
+                Stop(_currentSong);
+            }
+            else
+            {
+                Pause(_currentSong);
+            }
+        }
+        
+        if ((!_currentScene.Equals(nextScene) && nextScene.name.Equals("MainMenu")) ||
+            (!_currentScene.Equals(nextScene) && nextScene.name.Equals("Credits")) ||
+            (!_currentScene.Equals(nextScene) && nextScene.name.Equals("Level-Selector")) ||
+            (!_currentScene.Equals(nextScene) && nextScene.name.Equals("Options")) ||
+            (!_currentScene.Equals(nextScene) && nextScene.name.Equals("ShadowLev")) ||
+            (!_currentScene.Equals(nextScene) && nextScene.name.Equals("EndPuntuation")))
         {
             Debug.Log("Menu");
-            Stop(0);
-            _AudioSources[0].Play();
-            activeScene = SceneManager.GetActiveScene();
+            _AudioSources[0].UnPause();
+            _currentScene = SceneManager.GetActiveScene();
+            _currentSong = 0;
         }
-        
-        if (!activeScene.Equals(SceneManager.GetActiveScene()) && SceneManager.GetActiveScene().name.Equals("Tutorial")){
+
+        if (!_currentScene.Equals(nextScene) && nextScene.name.Equals("Tutorial")){
             Debug.Log("Tutorial");
-            Stop(1);
             _AudioSources[1].Play();
-            activeScene = SceneManager.GetActiveScene();
+            _currentScene = SceneManager.GetActiveScene();
+            _currentSong = 1;
         }
         
-        if (!activeScene.Equals(SceneManager.GetActiveScene()) && SceneManager.GetActiveScene().name.Equals("Jungla")){
+        if (!_currentScene.Equals(nextScene) && nextScene.name.Equals("Jungla")){
             Debug.Log("Jungla");
-            Stop(2);
             _AudioSources[2].Play();
-            activeScene = SceneManager.GetActiveScene();
+            _currentScene = SceneManager.GetActiveScene();
+            _currentSong = 2;
         }
         
-        if (!activeScene.Equals(SceneManager.GetActiveScene()) && SceneManager.GetActiveScene().name.Equals("Desierto")){
+        if (!_currentScene.Equals(nextScene) && nextScene.name.Equals("Desierto")){
             Debug.Log("Desierto");
-            Stop(3);
             _AudioSources[3].Play();
-            activeScene = SceneManager.GetActiveScene();
+            _currentScene = SceneManager.GetActiveScene();
+            _currentSong = 3;
         }
         
-        if (!activeScene.Equals(SceneManager.GetActiveScene()) && SceneManager.GetActiveScene().name.Equals("Moon")){
+        if (!_currentScene.Equals(nextScene) && nextScene.name.Equals("Moon")){
             Debug.Log("Moon");
-            Stop(4);
             _AudioSources[4].Play();
-            activeScene = SceneManager.GetActiveScene();
+            _currentScene = SceneManager.GetActiveScene();
+            _currentSong = 4;
         }
         
-        if (!activeScene.Equals(SceneManager.GetActiveScene()) && SceneManager.GetActiveScene().name.Equals("City")){
+        if (!_currentScene.Equals(nextScene) && nextScene.name.Equals("City")){
             Debug.Log("City");
-            Stop(5);
             _AudioSources[5].Play();
-            activeScene = SceneManager.GetActiveScene();
+            _currentScene = SceneManager.GetActiveScene();
+            _currentSong = 5;
         }
         
-        if (!activeScene.Equals(SceneManager.GetActiveScene()) && SceneManager.GetActiveScene().name.Equals("City")){
+        if (!_currentScene.Equals(nextScene) && nextScene.name.Equals("City")){
             Debug.Log("City");
-            Stop(6);
             _AudioSources[6].Play();
-            activeScene = SceneManager.GetActiveScene();
+            _currentScene = SceneManager.GetActiveScene();
+            _currentSong = 6;
         }
         
     }
@@ -98,5 +113,42 @@ public class DontDestroy : MonoBehaviour
     public void changeVolume(float volume)
     {
         AudioListener.volume = volume;
+    }
+    
+    private void Stop(int audioIndex)
+    {
+        for (int i = _AudioSources.Length - 1; i >= 0; i--)
+        {
+            if (i != audioIndex)
+            {
+                _AudioSources[i].Stop();
+            }
+        }
+    }
+
+    private void Pause(int audioIndex)
+    {
+        for (int i = _AudioSources.Length - 1; i >= 0; i--)
+        {
+            if (i != audioIndex)
+            {
+                _AudioSources[i].Pause();
+            }
+        }
+    }
+
+    private bool EndPunctuationCheck()
+    {
+        string[] sceneNames = new []{"MainMenu","Credits","Level-Selector","Options","ShadowLev"};
+
+        foreach (var scene in sceneNames)
+        {
+            if (_currentScene.name.Equals(scene))
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
