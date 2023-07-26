@@ -1121,7 +1121,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -2533,6 +2533,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 427945548}
     m_Modifications:
+    - target: {fileID: 7359205642497010845, guid: c67f8afd3010823448dc7fd9fd6e3ad0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 427945549}
+    - target: {fileID: 7359205642497010845, guid: c67f8afd3010823448dc7fd9fd6e3ad0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitToMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 7359205642895115246, guid: c67f8afd3010823448dc7fd9fd6e3ad0, type: 3}
       propertyPath: m_Name
       value: PauseMenu
@@ -2624,6 +2632,14 @@ PrefabInstance:
     - target: {fileID: 7359205642895115247, guid: c67f8afd3010823448dc7fd9fd6e3ad0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7359205643991031334, guid: c67f8afd3010823448dc7fd9fd6e3ad0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 427945549}
+    - target: {fileID: 7359205643991031334, guid: c67f8afd3010823448dc7fd9fd6e3ad0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: resume
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c67f8afd3010823448dc7fd9fd6e3ad0, type: 3}
@@ -4652,7 +4668,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1234550598
 GameObject:
@@ -5949,28 +5965,28 @@ Transform:
   - {fileID: 1392740063}
   - {fileID: 843283373}
   - {fileID: 620962722}
+  - {fileID: 586080951}
   - {fileID: 608456612}
   - {fileID: 2012400241}
   - {fileID: 1107995575}
   - {fileID: 1035439653}
   - {fileID: 1750562372}
   - {fileID: 1345109028}
+  - {fileID: 1588150425}
   - {fileID: 1506066629}
   - {fileID: 2035823463}
   - {fileID: 387178058}
-  - {fileID: 1573783922}
   - {fileID: 1639047832}
-  - {fileID: 1198199026}
-  - {fileID: 586080951}
-  - {fileID: 1012925557}
-  - {fileID: 1166835230}
-  - {fileID: 1389988160}
   - {fileID: 1811768406}
-  - {fileID: 1588150425}
+  - {fileID: 1144052029}
+  - {fileID: 1573783922}
   - {fileID: 470975264}
   - {fileID: 1964272641}
+  - {fileID: 1198199026}
+  - {fileID: 1166835230}
   - {fileID: 236420823}
-  - {fileID: 1144052029}
+  - {fileID: 1389988160}
+  - {fileID: 1012925557}
   - {fileID: 433985076}
   - {fileID: 1742967680}
   - {fileID: 805085759}
@@ -7392,7 +7408,7 @@ RectTransform:
   m_Children:
   - {fileID: 987817802}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
