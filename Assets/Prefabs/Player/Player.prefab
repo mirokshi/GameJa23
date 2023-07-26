@@ -4970,7 +4970,7 @@ MonoBehaviour:
   speedMultiplier: 0.3
   minSpeed: 3
   adjustedSpeed: 0
-  weightToCut: 45
+  weightToCut: 40
 --- !u!114 &7681878590867067997
 MonoBehaviour:
   m_ObjectHideFlags: 0
