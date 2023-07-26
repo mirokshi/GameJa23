@@ -59,37 +59,30 @@ public class MusicManager : MonoBehaviour
             (!_currentScene.Equals(nextScene) && nextScene.name.Equals("Options")) ||
             (!_currentScene.Equals(nextScene) && nextScene.name.Equals("ShadowLev")))
         {
-            Debug.Log("Menu");
             SetMusic(0);
         }
 
-        if (!_currentScene.Equals(nextScene) && nextScene.name.Equals("Tutorial")){
-            Debug.Log("Tutorial");
+        if (!_currentScene.Equals(nextScene) && (nextScene.name.Equals("Tutorial") || nextScene.name.Equals("TutorialSH"))){
             SetMusic(1);
         }
         
-        if (!_currentScene.Equals(nextScene) && nextScene.name.Equals("Jungla")){
-            Debug.Log("Jungla");
+        if (!_currentScene.Equals(nextScene) && (nextScene.name.Equals("Jungla") || nextScene.name.Equals("JunglaSH"))){
             SetMusic(5);
         }
         
-        if (!_currentScene.Equals(nextScene) && nextScene.name.Equals("Desierto")){
-            Debug.Log("Desierto");
+        if (!_currentScene.Equals(nextScene) && (nextScene.name.Equals("Desierto") || nextScene.name.Equals("DesiertoSH"))){
             SetMusic(2);
         }
         
-        if (!_currentScene.Equals(nextScene) && nextScene.name.Equals("Moon")){
-            Debug.Log("Moon");
+        if (!_currentScene.Equals(nextScene) && (nextScene.name.Equals("Moon") || nextScene.name.Equals("MoonSH"))){
             SetMusic(4);
         }
         
-        if (!_currentScene.Equals(nextScene) && nextScene.name.Equals("City")){
-            Debug.Log("City");
+        if (!_currentScene.Equals(nextScene) && (nextScene.name.Equals("City") || nextScene.name.Equals("CitySH"))){
             SetMusic(3);
         }
         
-        if (!_currentScene.Equals(nextScene) && nextScene.name.Equals("Templo")){
-            Debug.Log("Templo");
+        if (!_currentScene.Equals(nextScene) && (nextScene.name.Equals("Templo") || nextScene.name.Equals("TemploSH"))){
             SetMusic(6);
         }
     }
