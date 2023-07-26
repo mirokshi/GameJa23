@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 7331693751630084436}
   - component: {fileID: 299665098711743246}
   - component: {fileID: 7921846395305450377}
+  - component: {fileID: 3507114667796559946}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -107,16 +108,16 @@ RectTransform:
   m_GameObject: {fileID: 1477182081285709567}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 3}
-  m_LocalScale: {x: 1.5830299, y: 1.2754018, z: 3}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5988266722879507564}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 210.19481, y: 189.63907}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 210.19481, y: 196.37}
+  m_SizeDelta: {x: 160, y: 43.458}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2818133940323076953
 CanvasRenderer:
@@ -175,7 +176,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -228,6 +229,26 @@ MonoBehaviour:
   text: {fileID: 0}
   message: 
   Animator: {fileID: 0}
+--- !u!95 &3507114667796559946
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477182081285709567}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a59ee9d271490734987bb30b176af4e6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1783577550483513694
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,6 +411,7 @@ GameObject:
   - component: {fileID: 6050352998484637116}
   - component: {fileID: 7813364456431451563}
   - component: {fileID: 7921846395305450375}
+  - component: {fileID: 3665905358056317264}
   m_Layer: 5
   m_Name: Restart
   m_TagString: Untagged
@@ -406,16 +428,16 @@ RectTransform:
   m_GameObject: {fileID: 3142723171977149779}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -26.724438}
-  m_LocalScale: {x: 1.5830299, y: 1.2754018, z: 3}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5988266722879507564}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -210.19484, y: 189.63907}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -210.19482, y: 196.3682}
+  m_SizeDelta: {x: 160, y: 43.4583}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6221803096190749646
 CanvasRenderer:
@@ -474,7 +496,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -527,6 +549,26 @@ MonoBehaviour:
   text: {fileID: 0}
   message: 
   Animator: {fileID: 0}
+--- !u!95 &3665905358056317264
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3142723171977149779}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a59ee9d271490734987bb30b176af4e6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &5633662323498339456
 GameObject:
   m_ObjectHideFlags: 0
