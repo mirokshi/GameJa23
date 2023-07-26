@@ -2254,17 +2254,9 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 427945549}
-    - target: {fileID: 7359205642497010845, guid: c67f8afd3010823448dc7fd9fd6e3ad0, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ExitToMenu
-      objectReference: {fileID: 0}
     - target: {fileID: 7359205642895115246, guid: c67f8afd3010823448dc7fd9fd6e3ad0, type: 3}
       propertyPath: m_Name
       value: PauseMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 7359205642895115246, guid: c67f8afd3010823448dc7fd9fd6e3ad0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7359205642895115247, guid: c67f8afd3010823448dc7fd9fd6e3ad0, type: 3}
       propertyPath: m_Pivot.x
@@ -2354,10 +2346,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 427945549}
-    - target: {fileID: 7359205643991031334, guid: c67f8afd3010823448dc7fd9fd6e3ad0, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: resume
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c67f8afd3010823448dc7fd9fd6e3ad0, type: 3}
 --- !u!1001 &608456611
@@ -3068,7 +3056,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7768011610587713635, guid: a3f2d1a9fe7f65c488523e6ad448e601, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7918815112336203623, guid: a3f2d1a9fe7f65c488523e6ad448e601, type: 3}
       propertyPath: m_Pivot.x
