@@ -45,11 +45,11 @@ public class DontDestroy : MonoBehaviour
         {
             if (_currentSong != 0)
             {
-                Stop(_currentSong);
+                Stop();
             }
             else
             {
-                Pause(_currentSong);
+                Pause();
             }
         }
         
@@ -115,26 +115,14 @@ public class DontDestroy : MonoBehaviour
         AudioListener.volume = volume;
     }
     
-    private void Stop(int audioIndex)
+    private void Stop()
     {
-        for (int i = _AudioSources.Length - 1; i >= 0; i--)
-        {
-            if (i != audioIndex)
-            {
-                _AudioSources[i].Stop();
-            }
-        }
+        _AudioSources[_currentSong].Stop();
     }
 
-    private void Pause(int audioIndex)
+    private void Pause()
     {
-        for (int i = _AudioSources.Length - 1; i >= 0; i--)
-        {
-            if (i != audioIndex)
-            {
-                _AudioSources[i].Pause();
-            }
-        }
+        _AudioSources[0].Pause();
     }
 
     private bool EndPunctuationCheck()
