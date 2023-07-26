@@ -146,7 +146,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: click
+          m_StringArgument: Pressed
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 7669095251066229873}
@@ -176,6 +176,7 @@ MonoBehaviour:
   level: 1
   text: {fileID: 7893838409903371356}
   message: 1
+  Animator: {fileID: 0}
 --- !u!95 &2687556936295512200
 Animator:
   serializedVersion: 5
