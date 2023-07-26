@@ -12,7 +12,6 @@ public class ObstacleFall : ObstacleAction
 
     public override void DoAction(ItemData itemData, float weight)
     {
-        Debug.Log("Success! (Fall)");
         if (itemData.itemType == ItemType.Board)
         {
             board.SetActive(true);

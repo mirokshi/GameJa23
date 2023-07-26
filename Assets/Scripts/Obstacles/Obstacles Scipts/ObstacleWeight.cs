@@ -11,8 +11,6 @@ public class ObstacleWeight : ObstacleAction
     
     public override void DoAction(ItemData itemData, float weight)
     {
-        Debug.Log("Success! (Weight)");
-        Debug.Log("Player weight: " + weight);
         if (weight <= obstacleData.weight)
         {
             bridge.SetActive(true);

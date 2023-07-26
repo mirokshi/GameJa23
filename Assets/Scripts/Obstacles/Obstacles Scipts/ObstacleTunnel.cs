@@ -6,6 +6,5 @@ public class ObstacleTunnel : ObstacleAction
 {
     public override void DoAction(ItemData itemData, float weight)
     {
-        Debug.Log("Success! (Tunnel)");
     }
 }

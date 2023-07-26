@@ -24,7 +24,6 @@ public class ObstacleController : MonoBehaviour
         
         else
         {
-            Debug.Log("Player avoids the Obstacle");
             Destroy(gameObject.GetComponent<BoxCollider2D>());
             _obstacleAction.DoAction(itemData, weight);
         }
@@ -42,7 +41,6 @@ public class ObstacleController : MonoBehaviour
 
     private void DeathTrigger()
     {
-        Debug.Log("Dead");
         OnDeath?.Invoke();
     }
 }
