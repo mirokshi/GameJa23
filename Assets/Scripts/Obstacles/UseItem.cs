@@ -41,8 +41,6 @@ public class UseItem : MonoBehaviour
          
          if (HasItemInHand() && !obstacleAction.GetItemType().Equals(ObstacleType.Weight))
          {
-            Debug.Log("Use item");
-            
             var itemData = _hand.GetItemInHand();
             
             var weight = _movementController.GetCurrentWeight();
@@ -52,7 +50,6 @@ public class UseItem : MonoBehaviour
          }
          else if(obstacleAction.GetItemType().Equals(ObstacleType.Weight))
          {
-            Debug.Log("Bridge");
             var itemData = _hand.GetItemInHand();
             var weight = _movementController.GetCurrentWeight();
             

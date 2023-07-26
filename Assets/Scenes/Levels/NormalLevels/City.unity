@@ -6695,7 +6695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1b06fe398dc3354b904c97bbdd66930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 3.7
+  velocity: 3.8
 --- !u!1001 &1748351079
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7913,11 +7913,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5242462367631702796, guid: d91ca491905f3024cb1f4361f66839b7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 506.98288
+      value: 506.96
       objectReference: {fileID: 0}
     - target: {fileID: 5242462367631702796, guid: d91ca491905f3024cb1f4361f66839b7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.25
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 5242462367631702796, guid: d91ca491905f3024cb1f4361f66839b7, type: 3}
       propertyPath: m_LocalPosition.z

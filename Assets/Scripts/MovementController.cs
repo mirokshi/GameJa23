@@ -51,13 +51,10 @@ public class MovementController : MonoBehaviour
                 _rigidbody.velocity = new Vector2(adjustedSpeed, _rigidbody.velocity.y);
             }
         }
-        
-        Debug.Log("Potion Effect: " + _potionEffect);
     }
 
     public float GetCurrentWeight()
     {
-        Debug.Log("Weight: " + _currentWeight);
         return _currentWeight;
     }
     

@@ -99,7 +99,6 @@ public class ItemGrid : MonoBehaviour
         
             if (itemType.Equals(ItemType.Potion))
             {
-                Debug.Log("Potion Activated");
                 OnUsePotion?.Invoke(inventoryItem._itemData);
                 _isItemInInventory = false;
                 inventoryItem.OnDestroy();

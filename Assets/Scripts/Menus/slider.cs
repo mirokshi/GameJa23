@@ -15,6 +15,6 @@ public class slider : MonoBehaviour
 
     private void Start()
     {
-        _slider.onValueChanged.AddListener(val => DontDestroy.Instance.changeVolume(val));
+        _slider.onValueChanged.AddListener(val => MusicManager.Instance.changeVolume(val));
     }
 }
