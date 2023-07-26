@@ -8159,7 +8159,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 168170276149168817, guid: 65e815507c2e8074d96e8b5d6fc8cf0f, type: 3}
       propertyPath: velocity
-      value: 4.2
+      value: 3.8
       objectReference: {fileID: 0}
     - target: {fileID: 168170276149168826, guid: 65e815507c2e8074d96e8b5d6fc8cf0f, type: 3}
       propertyPath: m_Name
@@ -8438,7 +8438,7 @@ PrefabInstance:
       objectReference: {fileID: 1841413382}
     - target: {fileID: 7681878590867067991, guid: f397da6af652d7741a2d3bcb30844e11, type: 3}
       propertyPath: weightToCut
-      value: 30
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7681878590867067996, guid: f397da6af652d7741a2d3bcb30844e11, type: 3}
       propertyPath: m_RootOrder
