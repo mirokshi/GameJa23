@@ -32,6 +32,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/ShadowLevels/TutorialSH.unity
     guid: 7ee1fa3754fcc904d823347e1d60cb9a
+  - enabled: 1
+    path: Assets/Scenes/Levels/NormalLevels/City.unity
+    guid: aa26ed622c91031439eb3c1f407b48ce
+  - enabled: 1
+    path: Assets/Scenes/Levels/NormalLevels/Moon.unity
+    guid: c44c6fca0d8ff2a4facd31eab006c30a
+  - enabled: 1
+    path: Assets/Scenes/Levels/ShadowLevels/CitySH.unity
+    guid: 50a06f14355fc2e419739d4120d82c49
+  - enabled: 1
+    path: Assets/Scenes/Levels/ShadowLevels/MoonSH.unity
+    guid: 428bc3621dd05c0409daa3d8ff3df15f
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

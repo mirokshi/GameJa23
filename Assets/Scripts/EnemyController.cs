@@ -22,7 +22,7 @@ public class EnemyController : MonoBehaviour
         {
             if (collider.CompareTag("Player"))
             {
-                collider.GetComponent<PlayerController>()._isDead = true;
+                collider.GetComponent<PlayerController>().DeathTrigger();
             }
         }
 

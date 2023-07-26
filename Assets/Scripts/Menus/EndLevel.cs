@@ -12,8 +12,12 @@ public class EndLevel : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(escena);
-            PlayerPrefs.SetInt("Score", CalculateScore());
+            if (other.GetComponent<PlayerController>()._isDead == false)
+            {
+                SceneManager.LoadScene(escena);
+                PlayerPrefs.SetInt("Score", CalculateScore());
+            }
+            
         }
     }
 

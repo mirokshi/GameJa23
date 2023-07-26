@@ -654,7 +654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8874567066775562217, guid: 9e10e7e3766a164429ff2c5b7e574083, type: 3}
       propertyPath: level
-      value: Jungla
+      value: Desierto
       objectReference: {fileID: 0}
     - target: {fileID: 8874567066775562217, guid: 9e10e7e3766a164429ff2c5b7e574083, type: 3}
       propertyPath: message
@@ -1277,7 +1277,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8874567066775562217, guid: 9e10e7e3766a164429ff2c5b7e574083, type: 3}
       propertyPath: level
-      value: Desierto
+      value: City
       objectReference: {fileID: 0}
     - target: {fileID: 8874567066775562217, guid: 9e10e7e3766a164429ff2c5b7e574083, type: 3}
       propertyPath: message
@@ -2311,7 +2311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8874567066775562217, guid: 9e10e7e3766a164429ff2c5b7e574083, type: 3}
       propertyPath: level
-      value: 4
+      value: Jungla
       objectReference: {fileID: 0}
     - target: {fileID: 8874567066775562217, guid: 9e10e7e3766a164429ff2c5b7e574083, type: 3}
       propertyPath: message
@@ -2501,7 +2501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8874567066775562217, guid: 9e10e7e3766a164429ff2c5b7e574083, type: 3}
       propertyPath: level
-      value: 3
+      value: Moon
       objectReference: {fileID: 0}
     - target: {fileID: 8874567066775562217, guid: 9e10e7e3766a164429ff2c5b7e574083, type: 3}
       propertyPath: message

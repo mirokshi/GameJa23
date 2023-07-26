@@ -6,7 +6,7 @@ using UnityEngine;
 public class Parallax : MonoBehaviour
 {
     private float length, startPos;
-    public GameObject camera;
+    public new GameObject camera;
     public float parallaxEffect;
 
     private void Start()
