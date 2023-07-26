@@ -2415,6 +2415,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: lvl-buton (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5431989124362397686, guid: 9e10e7e3766a164429ff2c5b7e574083, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Pressed
+      objectReference: {fileID: 0}
     - target: {fileID: 7319692150093213919, guid: 9e10e7e3766a164429ff2c5b7e574083, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
