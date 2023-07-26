@@ -521,7 +521,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -3
-  m_Sprite: {fileID: 21300000, guid: d66493c981ede0443a722cae7be972d0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e9affe9a22a6a2040a96ad6cd3121676, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -953,7 +953,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -3
-  m_Sprite: {fileID: 21300000, guid: d66493c981ede0443a722cae7be972d0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e9affe9a22a6a2040a96ad6cd3121676, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1175,7 +1175,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: bf6d3a0db1079874db41b10653efd2b1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d11f58843075c414f9927d6e5593f009, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1262,7 +1262,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -2
-  m_Sprite: {fileID: 21300000, guid: 39ebdcc67d7c3614b9dbea5f6dc5818f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fc15e3232fe457a4db507a464cf99727, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1986,7 +1986,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b9a29db9b74a6734a8ea68ca79d83d40, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f20bb52f8feda6a4d8ad3c3b06a92c96, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2244,7 +2244,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b9a29db9b74a6734a8ea68ca79d83d40, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f20bb52f8feda6a4d8ad3c3b06a92c96, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2370,7 +2370,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Here all the obstacles have the same aspect, so I hope you have memorized
+  m_text: Here all the obstacles look nearly the same, so we hope you have memorized
     our level design!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2637,7 +2637,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b9a29db9b74a6734a8ea68ca79d83d40, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f20bb52f8feda6a4d8ad3c3b06a92c96, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2721,7 +2721,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: bf6d3a0db1079874db41b10653efd2b1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d11f58843075c414f9927d6e5593f009, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3842,7 +3842,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: bf6d3a0db1079874db41b10653efd2b1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d11f58843075c414f9927d6e5593f009, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4018,7 +4018,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -2
-  m_Sprite: {fileID: 21300000, guid: 39ebdcc67d7c3614b9dbea5f6dc5818f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fc15e3232fe457a4db507a464cf99727, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4254,7 +4254,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -2
-  m_Sprite: {fileID: 21300000, guid: 39ebdcc67d7c3614b9dbea5f6dc5818f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fc15e3232fe457a4db507a464cf99727, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4797,8 +4797,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Also, fake items have now the same aspect too, so good luck knowing if
-    they have value. '
+  m_text: 'Also, fake items have now the same aspect too, so good luck knowing their
+    value. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5358,7 +5358,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -3
-  m_Sprite: {fileID: 21300000, guid: d66493c981ede0443a722cae7be972d0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e9affe9a22a6a2040a96ad6cd3121676, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5881,11 +5881,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5242462367631702796, guid: c068bfac1fecf7b4084219dcc90c3e67, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.15
+      value: 16.74
       objectReference: {fileID: 0}
     - target: {fileID: 5242462367631702796, guid: c068bfac1fecf7b4084219dcc90c3e67, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.85
+      value: 0.79
       objectReference: {fileID: 0}
     - target: {fileID: 5242462367631702796, guid: c068bfac1fecf7b4084219dcc90c3e67, type: 3}
       propertyPath: m_LocalPosition.z
