@@ -1441,12 +1441,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9eb00807654b364a9bec3602927d645, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioSources:
+  _AudioSources:
   - {fileID: 1202666110}
   - {fileID: 1202666116}
   - {fileID: 1202666115}
   - {fileID: 1202666114}
   - {fileID: 1202666113}
+  activeScene:
+    m_Handle: 0
 --- !u!4 &1202666112
 Transform:
   m_ObjectHideFlags: 0
