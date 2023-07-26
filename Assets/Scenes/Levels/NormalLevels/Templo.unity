@@ -2278,7 +2278,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handInventory: {fileID: 1596448185}
-  playerInventory: {fileID: 1841413382}
   itemPrefab: {fileID: 8128289522782051307, guid: 7f79f713025025144b4158a927960364, type: 3}
 --- !u!1001 &538922998
 PrefabInstance:
@@ -9546,25 +9545,9 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7681878590867067991, guid: f397da6af652d7741a2d3bcb30844e11, type: 3}
-      propertyPath: minSpeed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7681878590867067991, guid: f397da6af652d7741a2d3bcb30844e11, type: 3}
-      propertyPath: baseSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7681878590867067991, guid: f397da6af652d7741a2d3bcb30844e11, type: 3}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 1841413382}
-    - target: {fileID: 7681878590867067991, guid: f397da6af652d7741a2d3bcb30844e11, type: 3}
-      propertyPath: _inventory
-      value: 
-      objectReference: {fileID: 1841413382}
-    - target: {fileID: 7681878590867067991, guid: f397da6af652d7741a2d3bcb30844e11, type: 3}
-      propertyPath: weightToCut
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 7681878590867067996, guid: f397da6af652d7741a2d3bcb30844e11, type: 3}
       propertyPath: m_RootOrder
       value: 5
