@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0407ca6e45667474db7a42bca19f9be2, type: 3}
-  m_Name: Tunnel
+  m_Name: Fantasma
   m_EditorClassIdentifier: 
-  name: Tunnel
+  name: Fantasma
   obstacleType: 2
   weight: 0
   sprite: {fileID: 0}

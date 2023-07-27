@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3030671556598794472}
   - component: {fileID: 2989623846652760291}
   m_Layer: 0
-  m_Name: Tunel
+  m_Name: Fantasma
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -155,8 +155,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseSpeed: 5
-  inventory: {fileID: 0}
-  speedMultiplier: 0.3
+  inventory: {fileID: 11400000, guid: 3bca04ba3883633418a1355f61b80889, type: 2}
+  speedReduction: 0.3
   minSpeed: 3
   adjustedSpeed: 0
   weightToCut: 30
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1e4b222e5282014a95640f6436f0051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hand: {fileID: 0}
+  _hand: {fileID: 11400000, guid: 07e9964d984a77248bd2d937af9c91ab, type: 2}
 --- !u!95 &381669546
 Animator:
   serializedVersion: 5

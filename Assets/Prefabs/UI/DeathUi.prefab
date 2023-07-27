@@ -229,6 +229,9 @@ MonoBehaviour:
   text: {fileID: 0}
   message: 
   Animator: {fileID: 0}
+  _inventories:
+  - {fileID: 11400000, guid: 07e9964d984a77248bd2d937af9c91ab, type: 2}
+  - {fileID: 11400000, guid: 3bca04ba3883633418a1355f61b80889, type: 2}
 --- !u!95 &3507114667796559946
 Animator:
   serializedVersion: 5
@@ -540,15 +543,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3142723171977149779}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0432dcc4a6067764c9271bf29ab3c67b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: Game2.0
+  level: Templo
   text: {fileID: 0}
   message: 
   Animator: {fileID: 0}
+  _inventories:
+  - {fileID: 11400000, guid: 07e9964d984a77248bd2d937af9c91ab, type: 2}
+  - {fileID: 11400000, guid: 3bca04ba3883633418a1355f61b80889, type: 2}
 --- !u!95 &3665905358056317264
 Animator:
   serializedVersion: 5

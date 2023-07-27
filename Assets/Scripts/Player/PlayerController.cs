@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("Player is dead");
         _isDead = true;
-        //Time.timeScale = 0f;
         deadUi.SetActive(true);
     }
 
@@ -28,6 +27,7 @@ public class PlayerController : MonoBehaviour
         ObstacleController.OnDeath += DeathTrigger;
         UseItem.OnDeath += DeathTrigger;
         ObstacleWeight.OnDeath += DeathTrigger;
+        EnemyController.OnDeath += DeathTrigger;
     }
 
     private void OnDisable()
@@ -35,5 +35,6 @@ public class PlayerController : MonoBehaviour
         ObstacleController.OnDeath -= DeathTrigger;
         UseItem.OnDeath -= DeathTrigger;
         ObstacleWeight.OnDeath -= DeathTrigger;
+        EnemyController.OnDeath -= DeathTrigger;
     }
 }

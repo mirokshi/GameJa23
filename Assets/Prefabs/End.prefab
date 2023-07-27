@@ -263,4 +263,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   escena: EndPuntuation
-  itemGrid: {fileID: 0}
+  inventoryPlayer: {fileID: 11400000, guid: 3bca04ba3883633418a1355f61b80889, type: 2}
