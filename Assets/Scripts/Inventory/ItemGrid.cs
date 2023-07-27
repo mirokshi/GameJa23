@@ -8,8 +8,8 @@ using UnityEngine.Serialization;
 
 public class ItemGrid : MonoBehaviour
 {
-    public const float TileSizeWidth = 32;
-    public const float TileSizeHeight = 32;
+    public const float TileSizeWidth = 48;
+    public const float TileSizeHeight = 48;
     
     public static Action<InventoryItem> OnThrowItem;
     
