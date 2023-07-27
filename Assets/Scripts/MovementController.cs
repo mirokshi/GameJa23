@@ -30,23 +30,23 @@ public class MovementController : MonoBehaviour
     void Update()
     {
         _currentWeight = inventory.GetTotalWeight();
-        
-        if (!_potionEffect)
-        {
-            adjustedSpeed = baseSpeed - Mathf.Floor(_currentWeight / weightToCut * speedReduction);
-        }
 
         if (!_playerController._isDead)
         {
-            if (adjustedSpeed < minSpeed)
+            if (!_potionEffect)
             {
-                _rigidbody.velocity = new Vector2(minSpeed, _rigidbody.velocity.y);
+                adjustedSpeed = baseSpeed - Mathf.Floor(_currentWeight / weightToCut * speedReduction);
+                
+                if (adjustedSpeed <= minSpeed)
+                {
+                    _rigidbody.velocity = new Vector2(minSpeed, _rigidbody.velocity.y);
+                }
+                else
+                {
+                    _rigidbody.velocity = new Vector2(adjustedSpeed, _rigidbody.velocity.y);
+                }
             }
-            else if(adjustedSpeed > minSpeed)
-            {
-                _rigidbody.velocity = new Vector2(adjustedSpeed, _rigidbody.velocity.y);
-            }
-            else if(_potionEffect)
+            else
             {
                 _rigidbody.velocity = new Vector2(adjustedSpeed, _rigidbody.velocity.y);
             }
