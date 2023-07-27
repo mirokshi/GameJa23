@@ -18,6 +18,11 @@ public abstract class Inventory : ScriptableObject
         _inventoryItemSlot = new InventorySlot[gridSizeWidth, gridSizeHeight];
     }
 
+    public virtual void CleanUp()
+    {
+        _inventoryItemSlot = new InventorySlot[gridSizeWidth, gridSizeHeight];
+    }
+
     public virtual void RemoveItemFromGrid(InventorySlot item)
     {
         for (int xi = 0; xi < item.Width; xi++)

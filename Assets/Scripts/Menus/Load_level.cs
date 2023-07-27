@@ -14,6 +14,8 @@ public class Load_level : MonoBehaviour
 
     public Animator Animator;
 
+    [SerializeField] private List<Inventory> _inventories;
+
     private void Start()
     {
         if (text is not null)
@@ -24,6 +26,11 @@ public class Load_level : MonoBehaviour
 
     public void loadLevel()
     {
+        foreach (var inventory in _inventories)
+        {
+            inventory.CleanUp();
+        }
+        
         StartCoroutine(load());
     }
 

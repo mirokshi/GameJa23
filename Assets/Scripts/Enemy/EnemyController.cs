@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,8 @@ public class EnemyController : MonoBehaviour
     public Transform _playerDetector;
 
     public float radius;
+
+    public static Action OnDeath;
     
     void Start()
     {
@@ -22,7 +25,7 @@ public class EnemyController : MonoBehaviour
         {
             if (collider.CompareTag("Player"))
             {
-                collider.GetComponent<PlayerController>().DeathTrigger();
+                OnDeath?.Invoke();
             }
         }
 

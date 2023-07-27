@@ -15,6 +15,13 @@ public class InventoryPlayer : Inventory
         _totalValue = 0;
     }
     
+    public override void CleanUp()
+    {
+        base.CleanUp();
+        _totalWeight = 0;
+        _totalValue = 0;
+    }
+    
     public override void RemoveItemFromGrid(InventorySlot inventorySlot)
     {
         base.RemoveItemFromGrid(inventorySlot);

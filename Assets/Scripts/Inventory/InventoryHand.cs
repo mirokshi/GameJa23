@@ -16,6 +16,12 @@ public class InventoryHand : Inventory
         base.OnEnable();
         _canPlaceItemInInventory = true;
     }
+    
+    public override void CleanUp()
+    {
+        base.CleanUp();
+        _canPlaceItemInInventory = true;
+    }
 
     public override void RemoveItemFromGrid(InventorySlot item)
     {
