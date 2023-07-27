@@ -54,6 +54,11 @@ public class InventoryUI : MonoBehaviour
             return false;
         }
 
+        if (!inventory.CanPlaceItem())
+        {
+            return false;
+        }
+
         if (overlapItem != null)
         {
             inventory.RemoveItemFromGrid(overlapItem);

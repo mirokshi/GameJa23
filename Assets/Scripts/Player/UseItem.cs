@@ -30,7 +30,7 @@ public class UseItem : MonoBehaviour
          var obstacleAction = collider2D.gameObject.GetComponent<ObstacleAction>();
          var obstacleController = collider2D.gameObject.GetComponent<ObstacleController>();
          
-         if (_hand.IsItemInInventory() && !obstacleAction.GetItemType().Equals(ObstacleType.Weight))
+         if (!_hand.CanPlaceItem() && !obstacleAction.GetItemType().Equals(ObstacleType.Weight))
          {
             var itemData = _hand.GetItemInHand();
             

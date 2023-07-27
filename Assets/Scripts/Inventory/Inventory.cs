@@ -53,4 +53,9 @@ public abstract class Inventory : ScriptableObject
     {
         _inventoryItemSlot[x, y] = inventorySlot;
     }
+
+    public virtual bool CanPlaceItem()
+    {
+        return true;
+    }
 }

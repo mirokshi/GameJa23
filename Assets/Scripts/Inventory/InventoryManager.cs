@@ -115,14 +115,10 @@ public class InventoryManager : MonoBehaviour
     
     private void PickUpItemForHand(InventorySlot item)
     {
-        var hand = (InventoryHand) handInventory.Inventory;
-        if (hand is not null) {
-            hand = (InventoryHand) handInventory.Inventory;
-            if (!hand.IsItemInInventory())
-            {
-                InventorySlot itemToInsert = CreateItem(item);
-                InsertItemHand(itemToInsert);
-            }
+        if (handInventory.Inventory.CanPlaceItem())
+        {
+            InventorySlot itemToInsert = CreateItem(item);
+            InsertItemHand(itemToInsert);
         }
     }
 
