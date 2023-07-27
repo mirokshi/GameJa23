@@ -79,7 +79,20 @@ public class ItemGrid : MonoBehaviour
             ClearGridReference(overlapItem);
         }
 
+        if (overlapItem is not null)
+        {
+            _totalWeight -= overlapItem._itemData.weight;
+            _totalValue -= overlapItem._itemData.value;
+            Debug.Log("Place Item--:"+ _totalWeight );            
+        }
+
+        _totalWeight += inventoryItem._itemData.weight;
+        _totalValue += inventoryItem._itemData.value;
+        Debug.Log("Place Item++:"+ _totalWeight );
+
+        
         PlaceItem(inventoryItem, posX, posY);
+        
         
         if (itemGridType == ItemGridType.Throw)
         {
@@ -105,9 +118,10 @@ public class ItemGrid : MonoBehaviour
             }
         }
 
-        _totalWeight += inventoryItem._itemData.weight;
-        _totalValue += inventoryItem._itemData.value;
-        
+        // _totalWeight += inventoryItem._itemData.weight;
+        // _totalValue += inventoryItem._itemData.value;
+        // Debug.Log("Place Item:"+ _totalWeight );
+
         RectTransform rectTransform = inventoryItem.GetComponent<RectTransform>();
         rectTransform.SetParent(_rectTransform);
 
@@ -150,7 +164,7 @@ public class ItemGrid : MonoBehaviour
         
         _totalWeight -= toReturn._itemData.weight;
         _totalValue -= toReturn._itemData.value;
-
+        Debug.Log("PickUpItem:"+ _totalWeight );
         ClearGridReference(toReturn);
 
         return toReturn;
