@@ -105,9 +105,6 @@ public class ItemGrid : MonoBehaviour
             }
         }
 
-        _totalWeight += inventoryItem._itemData.weight;
-        _totalValue += inventoryItem._itemData.value;
-        
         RectTransform rectTransform = inventoryItem.GetComponent<RectTransform>();
         rectTransform.SetParent(_rectTransform);
 
@@ -147,9 +144,6 @@ public class ItemGrid : MonoBehaviour
         {
             _isItemInInventory = false;
         }
-        
-        _totalWeight -= toReturn._itemData.weight;
-        _totalValue -= toReturn._itemData.value;
 
         ClearGridReference(toReturn);
 
@@ -303,13 +297,18 @@ public class ItemGrid : MonoBehaviour
         }
     }
 
+    public void UpdateWeight(int value)
+    {
+        if (itemGridType == ItemGridType.Inventory)
+        {
+            _totalWeight += value;
+        }
+    }
+
     public int GetTotalWeight()
     {
-        if (_totalWeight == 0)
-        {
-            return 1;
-        }
-        
+        Debug.Log("Current weight " + _totalWeight);
+
         return _totalWeight;
     }
 

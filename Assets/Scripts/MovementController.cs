@@ -45,6 +45,8 @@ public class MovementController : MonoBehaviour
                 {
                     _rigidbody.velocity = new Vector2(adjustedSpeed, _rigidbody.velocity.y);
                 }
+                
+                Debug.Log("Current velocity: " + _rigidbody.velocity.y);
             }
             else
             {
