@@ -13,7 +13,7 @@ public class MovementController : MonoBehaviour
     
     [SerializeField] private ItemGrid inventory;
     
-    public float speedMultiplier = 0.3f;
+    public float speedReduction = 0.3f;
     public float minSpeed = 2;
     public float adjustedSpeed = 0f;
     public float weightToCut = 20f;
@@ -30,23 +30,25 @@ public class MovementController : MonoBehaviour
     void Update()
     {
         _currentWeight = inventory.GetTotalWeight();
-        
-        if (!_potionEffect)
-        {
-            adjustedSpeed = baseSpeed - speedMultiplier * (int) (_currentWeight / weightToCut);
-        }
 
         if (!_playerController._isDead)
         {
-            if (adjustedSpeed < minSpeed)
+            if (!_potionEffect)
             {
-                _rigidbody.velocity = new Vector2(minSpeed, _rigidbody.velocity.y);
+                adjustedSpeed = baseSpeed - Mathf.Floor(_currentWeight / weightToCut * speedReduction);
+                
+                if (adjustedSpeed <= minSpeed)
+                {
+                    _rigidbody.velocity = new Vector2(minSpeed, _rigidbody.velocity.y);
+                }
+                else
+                {
+                    _rigidbody.velocity = new Vector2(adjustedSpeed, _rigidbody.velocity.y);
+                }
+                
+                Debug.Log("Current velocity: " + _rigidbody.velocity.y);
             }
-            else if(adjustedSpeed > minSpeed)
-            {
-                _rigidbody.velocity = new Vector2(adjustedSpeed, _rigidbody.velocity.y);
-            }
-            else if(_potionEffect)
+            else
             {
                 _rigidbody.velocity = new Vector2(adjustedSpeed, _rigidbody.velocity.y);
             }
