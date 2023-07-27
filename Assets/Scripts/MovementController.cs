@@ -13,7 +13,7 @@ public class MovementController : MonoBehaviour
     
     [SerializeField] private ItemGrid inventory;
     
-    public float speedMultiplier = 0.3f;
+    public float speedReduction = 0.3f;
     public float minSpeed = 2;
     public float adjustedSpeed = 0f;
     public float weightToCut = 20f;
@@ -33,7 +33,7 @@ public class MovementController : MonoBehaviour
         
         if (!_potionEffect)
         {
-            adjustedSpeed = baseSpeed * (speedMultiplier * ( 1 - (int) (_currentWeight / weightToCut)));
+            adjustedSpeed = baseSpeed * Mathf.Floor(_currentWeight / weightToCut) * speedReduction;
         }
 
         if (!_playerController._isDead)
