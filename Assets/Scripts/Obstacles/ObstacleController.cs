@@ -11,6 +11,8 @@ public class ObstacleController : MonoBehaviour
     
     public static Action OnDeath;
 
+    public ParticleSystem ParticleSystem;
+
     private void Awake()
     {
         _obstacleAction = GetComponent<ObstacleAction>();
@@ -25,6 +27,11 @@ public class ObstacleController : MonoBehaviour
         
         else
         {
+            if (ParticleSystem != null)
+            {
+                ParticleSystem.transform.position = this.transform.position + new Vector3(0, .2f,0);
+                ParticleSystem.Play();
+            }
 
             Destroy(gameObject.GetComponent<BoxCollider2D>());
             _obstacleAction.DoAction(itemData, weight);
