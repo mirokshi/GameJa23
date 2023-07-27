@@ -39,14 +39,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/NormalLevels/Moon.unity
     guid: c44c6fca0d8ff2a4facd31eab006c30a
   - enabled: 1
-    path: Assets/Scenes/Levels/ShadowLevels/CitySH.unity
-    guid: 50a06f14355fc2e419739d4120d82c49
-  - enabled: 1
     path: Assets/Scenes/Levels/ShadowLevels/MoonSH.unity
     guid: 428bc3621dd05c0409daa3d8ff3df15f
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Levels/ShadowLevels/CitySH.unity
+    guid: 2a4ec4d4c73059e4294d6b8793711da4
   - enabled: 1
     path: Assets/Scenes/Levels/NormalLevels/Templo.unity
     guid: ef1c7410859b7f447a1b37ac3a23bc4a
