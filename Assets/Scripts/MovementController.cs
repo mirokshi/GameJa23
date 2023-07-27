@@ -33,7 +33,7 @@ public class MovementController : MonoBehaviour
         
         if (!_potionEffect)
         {
-            adjustedSpeed = baseSpeed - speedMultiplier * (int) (_currentWeight / weightToCut);
+            adjustedSpeed = baseSpeed * (speedMultiplier * ( 1 - (int) (_currentWeight / weightToCut)));
         }
 
         if (!_playerController._isDead)
