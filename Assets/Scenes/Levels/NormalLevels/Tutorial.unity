@@ -959,6 +959,10 @@ PrefabInstance:
       propertyPath: Animator
       value: 
       objectReference: {fileID: 1759889687}
+    - target: {fileID: 7921846395305450375, guid: a3f2d1a9fe7f65c488523e6ad448e601, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7921846395305450377, guid: a3f2d1a9fe7f65c488523e6ad448e601, type: 3}
       propertyPath: Animator
       value: 
