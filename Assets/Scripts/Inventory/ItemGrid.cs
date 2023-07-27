@@ -304,6 +304,14 @@ public class ItemGrid : MonoBehaviour
             _totalWeight += value;
         }
     }
+    
+    public void UpdateValue(int value)
+    {
+        if (itemGridType == ItemGridType.Inventory)
+        {
+            _totalValue += value;
+        }
+    }
 
     public int GetTotalWeight()
     {
