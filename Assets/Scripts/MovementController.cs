@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Inventory;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -11,7 +10,7 @@ public class MovementController : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private PlayerController _playerController;
     
-    [SerializeField] private ItemGrid inventory;
+    [SerializeField] private InventoryPlayer inventory;
     
     public float speedReduction = 0.3f;
     public float minSpeed = 2;
@@ -82,11 +81,11 @@ public class MovementController : MonoBehaviour
 
     private void OnEnable()
     {
-        ItemGrid.OnUsePotion += OnUsePotion;
+        InventoryHand.OnUsePotion += OnUsePotion;
     }
 
     private void OnDisable()
     {
-        ItemGrid.OnUsePotion -= OnUsePotion;
+        InventoryHand.OnUsePotion -= OnUsePotion;
     }
 }

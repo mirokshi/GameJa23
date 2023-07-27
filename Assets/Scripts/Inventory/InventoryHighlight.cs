@@ -12,31 +12,31 @@ public class InventoryHighlight : MonoBehaviour
         highlighter.gameObject.SetActive(b);
     }
     
-    public void SetSize(InventoryItem targetItem)
+    public void SetSize(InventorySlot targetItem)
     {
         Vector2 size = new Vector2();
-        size.x = targetItem.WIDTH * ItemGrid.TileSizeWidth;
-        size.y = targetItem.HEIGHT * ItemGrid.TileSizeHeight;
+        size.x = targetItem.Width * InventoryUI.TileSizeWidth;
+        size.y = targetItem.Height * InventoryUI.TileSizeHeight;
 
         highlighter.sizeDelta = size;
     }
 
-    public void SetPosition(ItemGrid targetGrid, InventoryItem targetItem)
+    public void SetPosition(InventoryUI targetGrid, InventorySlot targetItem)
     {
-        Vector2 pos = targetGrid.CalculatePositionGrid(targetItem, targetItem.onGridPositionX, targetItem.onGridPositionY);
+        var pos = targetGrid.CalculatePositionGrid(targetItem, targetItem.OnGridPositionX, targetItem.OnGridPositionY);
 
         highlighter.localPosition = pos;
     }
 
-    public void SetParent(ItemGrid targetGrid)
+    public void SetParent(InventoryUI targetGrid)
     {
         if (targetGrid ==  null) { return;}
         highlighter.SetParent(targetGrid.GetComponent<RectTransform>());
     }
     
-    public void SetPosition(ItemGrid targetGrid, InventoryItem targetItem, int posX, int posY)
+    public void SetPosition(InventoryUI targetGrid, InventorySlot targetItem, int posX, int posY)
     {
-        Vector2 pos = targetGrid.CalculatePositionGrid(targetItem,posX,posY);
+        var pos = targetGrid.CalculatePositionGrid(targetItem,posX,posY);
 
         highlighter.localPosition = pos;
     }

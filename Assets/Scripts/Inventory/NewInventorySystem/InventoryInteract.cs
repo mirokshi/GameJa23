@@ -1,10 +1,9 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class GridInteract : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
+public class InventoryInteract : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     private InventoryManager _inventoryManager;
     private InventoryUI _inventoryUI;

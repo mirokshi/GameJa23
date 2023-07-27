@@ -7,7 +7,8 @@ using UnityEngine;
 
 public class UseItem : MonoBehaviour
 {
-   [SerializeField] private ItemGrid _hand;
+   [SerializeField] private InventoryHand _hand;
+   
    private MovementController _movementController;
 
    public static Action OnDeath;
@@ -15,16 +16,6 @@ public class UseItem : MonoBehaviour
    private void Start()
    {
       _movementController = GetComponent<MovementController>();
-   }
-
-   private bool HasItemInHand()
-   {
-      if (!_hand.IsItemInInventory())
-      {
-         return false;
-      }
-
-      return true;
    }
 
    private void DeathTrigger()
@@ -39,7 +30,7 @@ public class UseItem : MonoBehaviour
          var obstacleAction = collider2D.gameObject.GetComponent<ObstacleAction>();
          var obstacleController = collider2D.gameObject.GetComponent<ObstacleController>();
          
-         if (HasItemInHand() && !obstacleAction.GetItemType().Equals(ObstacleType.Weight))
+         if (_hand.IsItemInInventory() && !obstacleAction.GetItemType().Equals(ObstacleType.Weight))
          {
             var itemData = _hand.GetItemInHand();
             

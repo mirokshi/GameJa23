@@ -5,19 +5,20 @@ using UnityEngine;
 
 public class PickUpItem : MonoBehaviour
 {
-    public static Action<InventoryItem> OnPickUpItem;
+    public static Action<InventorySlot> OnPickUpItem;
 
-    private InventoryItem _inventoryItem;
+    private InventorySlot _inventoryItem;
 
     private void Awake()
     {
-        _inventoryItem = GetComponent<InventoryItem>();
+        _inventoryItem = gameObject.GetComponent<InventorySlot>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))
         {
+            Debug.Log("Pick Up Item");
             OnPickUpItem?.Invoke(_inventoryItem);
             Destroy(gameObject);
         }
