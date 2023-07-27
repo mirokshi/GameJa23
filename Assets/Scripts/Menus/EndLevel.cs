@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class EndLevel : MonoBehaviour
 {
     public string escena;
-    [SerializeField] private ItemGrid itemGrid;
+    [SerializeField] private InventoryPlayer inventoryPlayer;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -23,6 +24,6 @@ public class EndLevel : MonoBehaviour
 
     private int CalculateScore()
     {
-        return itemGrid.GetTotalValue();
+        return inventoryPlayer.GetTotalValue();
     }
 }

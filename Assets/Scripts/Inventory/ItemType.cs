@@ -1,6 +1,4 @@
-﻿namespace Inventory
-{
-    public enum ItemType
+﻿    public enum ItemType
     {
         Board,
         LaunchPad,
@@ -11,4 +9,3 @@
         Pickaxe,
         Gold
     }
-}

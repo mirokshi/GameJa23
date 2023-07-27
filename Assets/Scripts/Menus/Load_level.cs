@@ -36,7 +36,6 @@ public class Load_level : MonoBehaviour
 
     public void exit()
     {
-        Debug.Log("Exit");
         Application.Quit();
     }
 }
