@@ -28,7 +28,6 @@ public class InventoryPlayer : Inventory
     
     public float GetTotalWeight()
     {
-        Debug.Log("Player weight: " + _totalWeight);
         if (_totalWeight == 0)
         {
             return 1;

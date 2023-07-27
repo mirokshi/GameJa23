@@ -19,7 +19,6 @@ public class InventoryHand : Inventory
         
         if (itemType.Equals(ItemType.Potion))
         {
-            Debug.Log("Potion Activated");
             OnUsePotion?.Invoke(inventorySlot.ItemData);
             inventorySlot.OnDestroy();
         }

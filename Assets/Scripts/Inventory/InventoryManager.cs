@@ -177,8 +177,8 @@ public class InventoryManager : MonoBehaviour
         Vector2 position = Input.mousePosition;
         if (_selectedItem != null)
         {
-            position.x -= (_selectedItem.Width - 1) * ItemGrid.TileSizeWidth / 2;
-            position.y += (_selectedItem.Height - 1) * ItemGrid.TileSizeHeight / 2;
+            position.x -= (_selectedItem.Width - 1) * InventoryUI.TileSizeWidth / 2;
+            position.y += (_selectedItem.Height - 1) * InventoryUI.TileSizeHeight / 2;
         }
         
         return _selectedInventory.GetTileGridPosition(position);

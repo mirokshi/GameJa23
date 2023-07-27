@@ -57,7 +57,6 @@ public class InventoryUI : MonoBehaviour
         if (overlapItem != null)
         {
             inventory.RemoveItemFromGrid(overlapItem);
-            //ClearGridReference(overlapItem);
         }
 
         PlaceItem(inventorySlot, posX, posY);
@@ -75,7 +74,6 @@ public class InventoryUI : MonoBehaviour
             for (int y = 0; y < inventorySlot.Height; y++)
             {
                 inventory.AddItemToGrid(inventorySlot, posX + x, posY + y);
-                // InventoryItemSlot[posX + x, posY + y] = inventoryItem;
             }
         }
         
@@ -182,10 +180,5 @@ public class InventoryUI : MonoBehaviour
         }
 
         return null;
-    }
-    
-    internal InventorySlot GetItem(int x, int y)
-    {
-        return inventory.GetItem(x, y);
     }
 }
