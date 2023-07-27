@@ -72,7 +72,7 @@ public class InventoryController : MonoBehaviour
         if (_oldPosition == positionOnGrid) { return; }
         
         _oldPosition = positionOnGrid;
-        if (_selectedItem == null)
+        if (_selectedItem == null && selectedItemGrid != null)
         {
             _itemToHighlight = selectedItemGrid.GetItem(positionOnGrid.x, positionOnGrid.y);
             if (_itemToHighlight != null )
@@ -148,13 +148,19 @@ public class InventoryController : MonoBehaviour
     private void PlaceItem(Vector2Int tileGridPosition)
     {
         bool complete= selectedItemGrid.PlaceItem(_selectedItem, tileGridPosition.x, tileGridPosition.y, ref _overlapItem);
-        
+
         if (complete)
         {
+            selectedItemGrid.UpdateWeight(_selectedItem._itemData.weight);
+            selectedItemGrid.UpdateValue(_selectedItem._itemData.value);
+            
             _selectedItem = null;
+            
             if (_overlapItem!=null)
             {
                 _selectedItem = _overlapItem;
+                selectedItemGrid.UpdateWeight(-_selectedItem._itemData.weight);
+                selectedItemGrid.UpdateValue(-_selectedItem._itemData.value);
                 _overlapItem = null;
                 _rectTransform = _selectedItem.GetComponent<RectTransform>();
                 _rectTransform.SetAsLastSibling();
@@ -167,6 +173,8 @@ public class InventoryController : MonoBehaviour
         _selectedItem = selectedItemGrid.PickUpItem(tileGridPosition.x, tileGridPosition.y);
         if (_selectedItem!=null)
         {
+            selectedItemGrid.UpdateWeight(-_selectedItem._itemData.weight);
+            selectedItemGrid.UpdateValue(-_selectedItem._itemData.value);
             _rectTransform = _selectedItem.GetComponent<RectTransform>();    
         }
         

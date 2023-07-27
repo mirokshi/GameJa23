@@ -15,7 +15,7 @@ TagManager:
   - Water
   - UI
   - DeathBackground
-  - 
+  - Particles
   - 
   - 
   - 
@@ -46,4 +46,10 @@ TagManager:
     locked: 0
   - name: Enemy
     uniqueID: 822862867
+    locked: 0
+  - name: Particle
+    uniqueID: 2670437523
+    locked: 0
+  - name: Player
+    uniqueID: 3635046315
     locked: 0

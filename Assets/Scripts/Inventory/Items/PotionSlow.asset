@@ -17,7 +17,7 @@ MonoBehaviour:
   name: PotionSlow
   width: 1
   height: 2
-  potionSpeed: 0
+  potionSpeed: 2
   potionDuration: 10
   weight: 3
   value: 10
