@@ -17,6 +17,8 @@ MonoBehaviour:
   name: ChestFake
   width: 3
   height: 3
+  potionSpeed: 0
+  potionDuration: 0
   weight: 30
   value: 1
-  itemIcon: {fileID: 21300000, guid: f53a7575d52a55d49abab4065d8c4b55, type: 3}
+  itemIcon: {fileID: 21300000, guid: c5d282b9607bc314793d1e44b714ac89, type: 3}

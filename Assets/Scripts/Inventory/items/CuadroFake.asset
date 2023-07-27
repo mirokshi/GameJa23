@@ -17,6 +17,8 @@ MonoBehaviour:
   name: PaintingFake
   width: 2
   height: 2
+  potionSpeed: 0
+  potionDuration: 0
   weight: 20
   value: 2
-  itemIcon: {fileID: 21300000, guid: 9bc229105f15d11418455ef85aabded3, type: 3}
+  itemIcon: {fileID: 21300000, guid: 1982c1fc323aba046bd1e3e5e70650db, type: 3}
