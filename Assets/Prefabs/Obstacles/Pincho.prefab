@@ -162,6 +162,7 @@ GameObject:
   - component: {fileID: 5243400523236748146}
   - component: {fileID: 4223047196921344309}
   - component: {fileID: 3466703372675621567}
+  - component: {fileID: 5423175161900303815}
   m_Layer: 0
   m_Name: Pincho
   m_TagString: Obstacle
@@ -227,7 +228,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8e2c7c73a8bc93d4987cfd902d0f59c4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d23dd76631419c949bad6d5ed42f1cca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -297,6 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c243035b0e082804c94c6673cc9761fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ParticleSystem: {fileID: 0}
 --- !u!114 &3466703372675621567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,6 +314,26 @@ MonoBehaviour:
   obstacleData: {fileID: 11400000, guid: 5bc76c17416254948816ca007f2dbe72, type: 2}
   board: {fileID: 4647428395865183607}
   launchPad: {fileID: 1271372200959010194}
+--- !u!95 &5423175161900303815
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435872253890291077}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3033392c9cc04bb4aa743b90fd454014, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &4647428395865183607
 GameObject:
   m_ObjectHideFlags: 0
