@@ -540,7 +540,7 @@ PrefabInstance:
     - target: {fileID: 1708968601563129557, guid: d711d5a18ab477749bd2760902330eaa, type: 3}
       propertyPath: itemGrid
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2050850221}
     - target: {fileID: 1708968601563129558, guid: d711d5a18ab477749bd2760902330eaa, type: 3}
       propertyPath: m_Name
       value: End (1)
@@ -1914,7 +1914,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4207565403761945564, guid: 6d62eedebc708a543815688df95dee63, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -10.761459
+      value: -10.761475
       objectReference: {fileID: 0}
     - target: {fileID: 4207565403772554388, guid: 6d62eedebc708a543815688df95dee63, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2368,6 +2368,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ExitToMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 7359205642895115245, guid: c67f8afd3010823448dc7fd9fd6e3ad0, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7359205642895115246, guid: c67f8afd3010823448dc7fd9fd6e3ad0, type: 3}
       propertyPath: m_Name
       value: PauseMenu
@@ -2442,7 +2446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7359205642895115247, guid: c67f8afd3010823448dc7fd9fd6e3ad0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -47.25003
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 7359205642895115247, guid: c67f8afd3010823448dc7fd9fd6e3ad0, type: 3}
       propertyPath: m_AnchoredPosition.y
