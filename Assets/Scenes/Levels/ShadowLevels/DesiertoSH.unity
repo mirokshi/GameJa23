@@ -2714,7 +2714,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4207565403761945564, guid: 6d62eedebc708a543815688df95dee63, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -10.761459
+      value: -10.761475
       objectReference: {fileID: 0}
     - target: {fileID: 4207565403772554388, guid: 6d62eedebc708a543815688df95dee63, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2766,6 +2766,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d62eedebc708a543815688df95dee63, type: 3}
+--- !u!114 &683053943 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4207565403497037634, guid: 6d62eedebc708a543815688df95dee63, type: 3}
+  m_PrefabInstance: {fileID: 683053942}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d871f97fbfb9294d9b224ab60ca5ecb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &813159339
 GameObject:
   m_ObjectHideFlags: 0
@@ -3776,7 +3787,7 @@ PrefabInstance:
     - target: {fileID: 7359205642497010845, guid: c67f8afd3010823448dc7fd9fd6e3ad0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 683053943}
     - target: {fileID: 7359205642497010845, guid: c67f8afd3010823448dc7fd9fd6e3ad0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ExitToMenu
@@ -3876,7 +3887,7 @@ PrefabInstance:
     - target: {fileID: 7359205643991031334, guid: c67f8afd3010823448dc7fd9fd6e3ad0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 683053943}
     - target: {fileID: 7359205643991031334, guid: c67f8afd3010823448dc7fd9fd6e3ad0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: resume
@@ -4150,6 +4161,7 @@ GameObject:
   - component: {fileID: 1434639588}
   - component: {fileID: 1434639587}
   - component: {fileID: 1434639586}
+  - component: {fileID: 1434639589}
   m_Layer: 5
   m_Name: Pause
   m_TagString: Untagged
@@ -4239,6 +4251,19 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1434639589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434639584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d871f97fbfb9294d9b224ab60ca5ecb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 1550940317}
 --- !u!1001 &1436853027
 PrefabInstance:
   m_ObjectHideFlags: 0
