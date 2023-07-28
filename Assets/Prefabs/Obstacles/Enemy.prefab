@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 474186259179536513}
   - component: {fileID: 474186259179536542}
   - component: {fileID: 474186259179536543}
+  - component: {fileID: 6367860717697717897}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Obstacle
@@ -161,3 +162,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacleData: {fileID: 11400000, guid: 7fec5d904c260b944ae22cb6004a2d50, type: 2}
+--- !u!95 &6367860717697717897
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474186259179536540}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 218c8088555c4064a9b4f100b3dd04f8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
