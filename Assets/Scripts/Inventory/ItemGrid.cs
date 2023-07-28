@@ -54,6 +54,7 @@ public class ItemGrid : MonoBehaviour
         _positionOnTheGrid.y = (position.y - mousePosition.y)/_canvas.scaleFactor;
         _tileGridPosition.x = (int)(_positionOnTheGrid.x / TileSizeWidth);
         _tileGridPosition.y = (int)(_positionOnTheGrid.y / TileSizeHeight);
+      
 
         return _tileGridPosition;
     }
@@ -107,7 +108,7 @@ public class ItemGrid : MonoBehaviour
             }
         }
 
-        RectTransform rectTransform = inventoryItem.GetComponent<RectTransform>();
+        RectTransform rectTransform = inventoryItem.GetComponent<RectTransform>() ;
         rectTransform.SetParent(_rectTransform);
 
         for (int x = 0; x < inventoryItem.WIDTH; x++)

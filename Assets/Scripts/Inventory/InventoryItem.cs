@@ -40,7 +40,7 @@ public class InventoryItem : MonoBehaviour
     public bool rotated = false;
     
     
-    internal void Set(ItemData itemData)
+    internal void Set(ItemData itemData, float scaleFactor)
     {
         _itemData = itemData;
         GetComponent<Image>().sprite = itemData.itemIcon;
@@ -51,7 +51,7 @@ public class InventoryItem : MonoBehaviour
             y = HEIGHT * ItemGrid.TileSizeHeight
         };
 
-        GetComponent<RectTransform>().sizeDelta = size;
+        GetComponent<RectTransform>().sizeDelta = size * scaleFactor;
     }
 
     public void Rotate()

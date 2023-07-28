@@ -10,6 +10,8 @@ public class InventoryController : MonoBehaviour
     private ItemGrid selectedItemGrid;
 
     [SerializeField] private ItemGrid handInventory;
+    [SerializeField] private Canvas _canvas;
+    
     
     public ItemGrid SelectedItemGrid
     {
@@ -78,7 +80,7 @@ public class InventoryController : MonoBehaviour
             if (_itemToHighlight != null )
             {
                 _inventoryHighlight.Show(true);
-                _inventoryHighlight.SetSize(_itemToHighlight);
+                _inventoryHighlight.SetSize(_itemToHighlight, _canvas.scaleFactor);
                 _inventoryHighlight.SetPosition(selectedItemGrid,_itemToHighlight);   
             }
             else
@@ -89,7 +91,7 @@ public class InventoryController : MonoBehaviour
         else
         {
             _inventoryHighlight.Show(selectedItemGrid.BoundryCheck(positionOnGrid.x,positionOnGrid.y,_selectedItem.WIDTH,_selectedItem.HEIGHT));
-            _inventoryHighlight.SetSize(_selectedItem);
+            _inventoryHighlight.SetSize(_selectedItem, _canvas.scaleFactor);
             _inventoryHighlight.SetPosition(selectedItemGrid,_selectedItem,positionOnGrid.x,positionOnGrid.y);   
         }
     }
@@ -106,7 +108,7 @@ public class InventoryController : MonoBehaviour
     private InventoryItem CreateItem(InventoryItem item)
     {
         InventoryItem inventoryItem = Instantiate(itemPrefab).GetComponent<InventoryItem>();
-        inventoryItem.Set(item._itemData);
+        inventoryItem.Set(item._itemData, _canvas.scaleFactor);
         return inventoryItem;
     }
     
@@ -138,9 +140,8 @@ public class InventoryController : MonoBehaviour
         Vector2 position = Input.mousePosition;
         if (_selectedItem != null)
         {
-            position.x -= (_selectedItem.WIDTH - 1) * (ItemGrid.TileSizeWidth ) / 2;
-            Debug.Log("Posicion: ");
-            position.y += (_selectedItem.HEIGHT - 1) * (ItemGrid.TileSizeHeight ) / 2;
+            position.x -= (_selectedItem.WIDTH - 1) * (ItemGrid.TileSizeWidth) / 2;
+            position.y += (_selectedItem.HEIGHT - 1) * (ItemGrid.TileSizeHeight) / 2;
         }
         
         return selectedItemGrid.GetTileGridPosition(position);

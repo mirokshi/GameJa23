@@ -10,13 +10,13 @@ public class InventoryHighlight : MonoBehaviour
         highlighter.gameObject.SetActive(b);
     }
     
-    public void SetSize(InventoryItem targetItem)
+    public void SetSize(InventoryItem targetItem, float scaleFactor)
     {
         Vector2 size = new Vector2();
         size.x = targetItem.WIDTH * ItemGrid.TileSizeWidth;
         size.y = targetItem.HEIGHT * ItemGrid.TileSizeHeight;
 
-        highlighter.sizeDelta = size;
+        highlighter.sizeDelta = size * scaleFactor;
     }
 
     public void SetPosition(ItemGrid targetGrid, InventoryItem targetItem)
