@@ -10,6 +10,7 @@ public class ItemGrid : MonoBehaviour
 {
     public const float TileSizeWidth = 48;
     public const float TileSizeHeight = 48;
+   
     
     public static Action<InventoryItem> OnThrowItem;
     
@@ -27,6 +28,7 @@ public class ItemGrid : MonoBehaviour
     [SerializeField] private int gridSizeWidth=7;
     [SerializeField] private int gridSizeHeight=4;
     [SerializeField] private ItemGridType itemGridType;
+    [SerializeField] private Canvas _canvas;
 
     public static Action<ItemData> OnUsePotion;
 
@@ -48,8 +50,8 @@ public class ItemGrid : MonoBehaviour
     public Vector2Int GetTileGridPosition(Vector2 mousePosition)
     {
         var position = _rectTransform.position;
-        _positionOnTheGrid.x = mousePosition.x - position.x;
-        _positionOnTheGrid.y = position.y - mousePosition.y;
+        _positionOnTheGrid.x = (mousePosition.x - position.x)/_canvas.scaleFactor;
+        _positionOnTheGrid.y = (position.y - mousePosition.y)/_canvas.scaleFactor;
         _tileGridPosition.x = (int)(_positionOnTheGrid.x / TileSizeWidth);
         _tileGridPosition.y = (int)(_positionOnTheGrid.y / TileSizeHeight);
 
