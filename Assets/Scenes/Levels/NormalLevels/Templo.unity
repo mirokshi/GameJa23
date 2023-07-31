@@ -3832,6 +3832,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7359205642895115247, guid: c67f8afd3010823448dc7fd9fd6e3ad0, type: 3}
   m_PrefabInstance: {fileID: 955902413}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &955902415 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7359205642895115246, guid: c67f8afd3010823448dc7fd9fd6e3ad0, type: 3}
+  m_PrefabInstance: {fileID: 955902413}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &987817798
 GameObject:
   m_ObjectHideFlags: 0
@@ -5801,7 +5806,7 @@ PrefabInstance:
     - target: {fileID: 4207565403497037634, guid: 6d62eedebc708a543815688df95dee63, type: 3}
       propertyPath: pauseMenu
       value: 
-      objectReference: {fileID: 1750665228}
+      objectReference: {fileID: 955902415}
     - target: {fileID: 4207565403497037635, guid: 6d62eedebc708a543815688df95dee63, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -5889,6 +5894,10 @@ PrefabInstance:
     - target: {fileID: 4207565403497037639, guid: 6d62eedebc708a543815688df95dee63, type: 3}
       propertyPath: m_Name
       value: Inventory
+      objectReference: {fileID: 0}
+    - target: {fileID: 4207565403761945564, guid: 6d62eedebc708a543815688df95dee63, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -10.761459
       objectReference: {fileID: 0}
     - target: {fileID: 4207565403772554388, guid: 6d62eedebc708a543815688df95dee63, type: 3}
       propertyPath: m_AnchorMax.y
